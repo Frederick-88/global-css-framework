@@ -1,0 +1,41 @@
+@font-face {
+  font-family: GlobalCSSFont;
+  src: url(../../assets/Fonts/Quicksand.ttf);
+}
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 20px;
+  border-radius: 10px;
+  background-color: aquamarine;
+  color: black;
+  font-weight: 500;
+  font-size: 0.75rem;
+  font-family: GlobalCSSFont;
+  transition: all 0.25s ease-in-out;
+  cursor: pointer;
+  outline: 0;
+  border: 0;
+
+  &:hover {
+    transition: all 0.25s ease-in-out;
+    background-color: rgb(14, 185, 134);
+  }
+}
+
+// Colors
+.primary {
+  background-color: aquamarine;
+  &:hover {
+    background-color: rgb(14, 185, 134);
+  }
+}
+
+.danger {
+  background-color: violet !important;
+  &:hover {
+    background-color: rgb(179, 112, 173) !important;
+  }
+}
