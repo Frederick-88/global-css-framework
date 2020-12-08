@@ -1,0 +1,23 @@
+@import "../../assets/styles/variables.scss";
+
+.input-field {
+  display: inline-block;
+  width: 100%;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid $primary;
+  font-family: $baseFont;
+  font-weight: 500;
+  font-size: 0.875em;
+  color: $black;
+  margin: 0;
+  outline: 0;
+
+  &:disabled {
+    color: $white;
+  }
+
+  &:focus {
+    border-color: $primaryHover;
+  }
+}

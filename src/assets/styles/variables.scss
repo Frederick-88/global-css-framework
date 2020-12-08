@@ -1,0 +1,11 @@
+@font-face {
+  font-family: GlobalCSSFont;
+  src: url(../fonts/Quicksand.ttf);
+}
+
+$baseFont: GlobalCSSFont;
+$primary: #78ff42;
+$primaryHover: #58c02f;
+$white: #ffffff;
+$black: #000000;
+$grey: #d1d1d1;

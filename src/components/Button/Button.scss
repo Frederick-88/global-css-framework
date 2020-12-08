@@ -1,7 +1,4 @@
-@font-face {
-  font-family: GlobalCSSFont;
-  src: url(../../assets/Fonts/Quicksand.ttf);
-}
+@import "../../assets/styles/variables.scss";
 
 .btn {
   display: inline-flex;
@@ -9,11 +6,11 @@
   align-items: center;
   padding: 8px 20px;
   border-radius: 10px;
-  background-color: aquamarine;
-  color: black;
+  background-color: $primary;
+  color: $black;
   font-weight: 500;
-  font-size: 0.75rem;
-  font-family: GlobalCSSFont;
+  font-size: 0.875rem;
+  font-family: $baseFont;
   transition: all 0.25s ease-in-out;
   cursor: pointer;
   outline: 0;
@@ -21,15 +18,15 @@
 
   &:hover {
     transition: all 0.25s ease-in-out;
-    background-color: rgb(14, 185, 134);
+    background-color: $primaryHover;
   }
 }
 
 // Colors
 .primary {
-  background-color: aquamarine;
+  background-color: $primary;
   &:hover {
-    background-color: rgb(14, 185, 134);
+    background-color: $primaryHover;
   }
 }
 
