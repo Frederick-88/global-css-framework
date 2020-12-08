@@ -1,4 +1,5 @@
 ## GLOBAL CSS FRAMEWORK
-#### Made with ReactJS
 
-#### © Chen Frederick 2020
+#### Build your web pages with produced components in no time.
+
+#### © Chen Frederick 2020 - Made with ReactJS
