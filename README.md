@@ -1,19 +1,5 @@
 # global-css-framework
 
-## Project setup
-```
-npm install
-```
+#### Build your web pages with produced components in no time.
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+#### ----- Coming Soon -----
