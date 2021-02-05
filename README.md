@@ -1,5 +1,19 @@
-## GLOBAL CSS FRAMEWORK
+# global-css-framework
 
-#### Build your web pages with produced components in no time.
+## Project setup
+```
+npm install
+```
 
-#### © Chen Frederick 2020 - Made with ReactJS
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
