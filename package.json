@@ -1,11 +1,24 @@
 {
-  "name": "global-css-framework",
-  "version": "1.0.0",
+  "name": "global-ui",
+  "version": "1.0.1",
+  "description": "UI Components Library from Vue.js - Made for NuxtJS & VueJS Developers.",
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com/"
+  },
+  "keywords": [
+    "global ui"
+  ],
   "repository": {
     "type": "git",
     "url": "https://github.com/Frederick-88/global-css-framework"
   },
   "main": "src",
+  "contributors": [
+    {
+      "name": "Chen Frederick",
+      "url": "https://fdtech.asia"
+    }
+  ],
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
