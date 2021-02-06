@@ -91,7 +91,7 @@ Currently still in development. :muscle: :v:
 
 ## Creators
 
-**Chen Frederick**
+**Chen Frederick :man:**
 
 - https://www.linkedin.com/in/chen-frederick-1324301a8/
 - https://github.com/Frederick-88
