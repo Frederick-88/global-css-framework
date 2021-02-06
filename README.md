@@ -51,4 +51,6 @@ Currently still in development.
 - https://www.linkedin.com/in/chen-frederick-1324301a8/
 - https://github.com/Frederick-88
 
-## © Chen Frederick - 2021
+### ----------------------------------
+
+### © Chen Frederick - 2021
