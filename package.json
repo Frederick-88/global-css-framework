@@ -2,9 +2,6 @@
   "name": "global-ui",
   "version": "1.0.1",
   "description": "UI Components Library from Vue.js - Made for NuxtJS & VueJS Developers.",
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com/"
-  },
   "keywords": [
     "global ui"
   ],
