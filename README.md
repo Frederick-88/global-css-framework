@@ -2,7 +2,7 @@
 
 ![Template](https://image.freepik.com/free-vector/people-drawing-web-page-elements-smartphone-lcd-screen-front-end-development-it-concept-software-development-process-pinkish-coral-blue-palette-vector-illustration_335657-1640.jpg)
 
-GlobalUI is an Open Source UI Kit built from VueJS. GlobalUI is a solution for any agency that wants to keep their UI consistent at either development & production ( e.g Buttons, Inputs, etc ). Facing future changes, GlobalUI can bring efficiency so developers can do changes for just 1 time. Made for Nuxt.js & Vue.js Developers.
+GlobalUI :+1: is an Open Source UI Kit built from VueJS. GlobalUI is a solution for any agency that wants to keep their UI consistent at either development & production ( e.g Buttons, Inputs, etc ). Facing future changes, GlobalUI can bring efficiency so developers can do changes for just 1 time. Made for Nuxt.js & Vue.js Developers.
 
 ## Table of Contents
 
@@ -15,12 +15,6 @@ GlobalUI is an Open Source UI Kit built from VueJS. GlobalUI is a solution for a
 ## Installation
 
 Several options are available:
-
-### Clone repo
-
-```bash
-$ git clone https://github.com/Frederick-88/global-css-framework.git
-```
 
 ### NPM
 
@@ -36,13 +30,64 @@ $ yarn add global-ui
 
 ## Usage
 
-### at Vue Project
+Several options are available:
 
-Content here
+### Vue
+
+To use it like this :
+
+```
+<template>
+  <div class="home">
+    <GlobalInput />
+    <GlobalButton />
+  </div>
+</template>
+```
+
+After installation, you have 2 options :
+
+1. Define Globally in `src/main.js` & Use Anywhere
+
+```
+import Vue from "vue";
+import App from "./App.vue";
+import GlobalUIs from "global-css-framework";
+
+// "GlobalUis" -> you can change the name to anything that you want
+Vue.use(GlobalUIs);
+
+new Vue({
+  render: function(h) {
+    return h(App);
+  },
+}).$mount("#app");
+
+```
+
+2. Import UI Components in your `.vue` component
+
+```
+<script>
+import { GlobalButton, GlobalInput } from "global-ui";
+
+export default {
+  name: "Your Vue Component Name",
+  components: {
+    GlobalButton,
+    GlobalInput,
+  },
+};
+</script>
+```
+
+### Nuxt
+
+Coming Soon :eyes:
 
 ## Contributing
 
-Currently still in development.
+Currently still in development. :muscle: :v:
 
 ## Creators
 
