@@ -1,4 +1,4 @@
-# GlobalUI - Open Source Vue UI Components Library built for Nuxt.js & Vue.js Developers. [![Linkedin](https://imgur.com/KRU9Skr)](https://www.linkedin.com/in/chen-frederick-1324301a8/)
+# GlobalUI - Open Source Vue UI Components Library built for Nuxt.js & Vue.js Developers. [![Linkedin](https://ibb.co/cwD6jbs)](https://www.linkedin.com/in/chen-frederick-1324301a8/)
 
 ![Template](https://image.freepik.com/free-vector/people-drawing-web-page-elements-smartphone-lcd-screen-front-end-development-it-concept-software-development-process-pinkish-coral-blue-palette-vector-illustration_335657-1640.jpg)
 
