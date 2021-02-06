@@ -1,6 +1,11 @@
 {
   "name": "global-css-framework",
   "version": "1.0.0",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Frederick-88/global-css-framework"
+  },
+  "main": "src",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
