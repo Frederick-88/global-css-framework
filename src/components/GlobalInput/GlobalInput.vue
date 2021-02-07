@@ -51,8 +51,9 @@ export default {
 };
 </script>
 
-<style lang="scss">
-.input-field__wrapper {
+<style>
+/* lang="scss" */
+/* .input-field__wrapper {
   position: relative;
 
   .input-field {
@@ -84,5 +85,5 @@ export default {
   .input-field--short {
     padding: 8px 15px;
   }
-}
+} */
 </style>
