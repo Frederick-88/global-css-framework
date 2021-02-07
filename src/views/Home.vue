@@ -11,7 +11,7 @@
     <GlobalButton :is-primary="true" is-short="true"
       >Global-Primary-Short-Button</GlobalButton
     >
-    <!-- <GlobalInput /> -->
+    <GlobalInput />
   </div>
 </template>
 
