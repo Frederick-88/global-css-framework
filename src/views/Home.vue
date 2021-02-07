@@ -5,10 +5,10 @@
     <GlobalButton :is-primary-hollow="true"
       >Global-Primary-Hollow-Button</GlobalButton
     >
-    <GlobalButton :is-primary="true" is-tall="true"
+    <GlobalButton :is-primary="true" :is-tall="true"
       >Global-Primary-Tall-Button</GlobalButton
     >
-    <GlobalButton :is-primary="true" is-short="true"
+    <GlobalButton :is-primary="true" :is-short="true"
       >Global-Primary-Short-Button</GlobalButton
     >
     <GlobalInput />
