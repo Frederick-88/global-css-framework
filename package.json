@@ -1,6 +1,6 @@
 {
   "name": "global-ui",
-  "version": "1.0.3",
+  "version": "1.1.0",
   "description": "Vue.js UI Components Library - Made for NuxtJS & VueJS Developers.",
   "keywords": [
     "global ui"
@@ -21,6 +21,8 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass-loader": "^7.3.1",
     "vue": "^2.6.11",
     "vue-router": "^3.2.0"
   },
