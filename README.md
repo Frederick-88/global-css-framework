@@ -9,6 +9,7 @@ GlobalUI :+1: is an Open Source UI Kit built from VueJS. GlobalUI is a solution 
 - [Templates](#templates)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Documentation](#documentation)
 - [Contributing](#contributing)
 - [Creators](#creators)
 
@@ -84,6 +85,10 @@ export default {
 ## Nuxt
 
 Coming Soon :eyes:
+
+## Documentation
+
+Currently still in development. :muscle: :v:
 
 ## Contributing
 
