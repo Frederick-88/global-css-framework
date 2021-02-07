@@ -32,7 +32,7 @@ $ yarn add global-ui
 
 Several options are available:
 
-### Vue
+## Vue
 
 To use it like this :
 
@@ -47,12 +47,12 @@ To use it like this :
 
 After installation, you have 2 options :
 
-1. Define Globally in `src/main.js` & Use Anywhere
+1. Define Globally in `src/main.js` & Use Anywhere without need to import again!
 
 ```
 import Vue from "vue";
 import App from "./App.vue";
-import GlobalUIs from "global-css-framework";
+import GlobalUIs from "global-ui";
 
 // "GlobalUis" -> you can change the name to anything that you want
 Vue.use(GlobalUIs);
@@ -81,7 +81,7 @@ export default {
 </script>
 ```
 
-### Nuxt
+## Nuxt
 
 Coming Soon :eyes:
 

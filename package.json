@@ -1,7 +1,7 @@
 {
   "name": "global-ui",
   "version": "1.0.2",
-  "description": "UI Components Library from Vue.js - Made for NuxtJS & VueJS Developers.",
+  "description": "Vue.js UI Components Library - Made for NuxtJS & VueJS Developers.",
   "keywords": [
     "global ui"
   ],
