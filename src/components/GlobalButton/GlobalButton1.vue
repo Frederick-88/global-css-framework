@@ -142,7 +142,8 @@ export default {
 .btn {
   display: block;
   margin: 10px;
-  padding: 15px 45px;
+  /* padding: 15px 45px; */
+  padding: 15px 30px;
   border-radius: 10px;
   text-align: center;
   transition: box-shadow 0.4s cubic-bezier(0, 0, 0, 1),
@@ -182,12 +183,11 @@ export default {
 
 /* Types */
 .btn--tall {
-  font-size: 0.875em;
-  padding-top: 14px;
-  padding-bottom: 14px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
 .btn--short {
-  padding: 8px 15px;
+  padding: 10px 18px;
 }
 </style>
