@@ -109,11 +109,11 @@ export default {
       }
 
       if (this.isWarning) {
-        classList.push("btn--alert");
+        classList.push("btn--warning");
       }
 
       if (this.isWarningHollow) {
-        classList.push("btn--alert btn--hollow");
+        classList.push("btn--warning btn--hollow");
       }
 
       if (this.isDanger) {
@@ -152,6 +152,7 @@ export default {
   background-size: 200% auto;
   text-decoration: none;
   cursor: pointer;
+  box-shadow: 1px 2px 8px rgba(0, 0, 0, 0.1);
   outline: 0;
   border: 0;
 
@@ -164,19 +165,127 @@ export default {
   &.btn--primary {
     background-image: linear-gradient(
       to right,
-      #50c9c3 0%,
-      #96deda 51%,
-      #50c9c3 100%
+      #0072ff 0%,
+      #00c6ff 51%,
+      #0072ff 100%
     );
     color: white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #50c9c3;
-      color: #50c9c3;
+      border: 1px solid #0072ff;
+      color: #0072ff;
 
       &:hover {
-        background: #50c9c3;
+        background: #0072ff;
+        color: white;
+      }
+    }
+  }
+
+  &.btn--warning {
+    background-image: linear-gradient(
+      to right,
+      #ff8008 0%,
+      #ffc837 51%,
+      #ff8008 100%
+    );
+
+    color: white;
+
+    &.btn--hollow {
+      background: transparent;
+      border: 1px solid #ffaf19;
+      color: #ffaf19;
+
+      &:hover {
+        background: #ffaf19;
+        color: white;
+      }
+    }
+  }
+
+  &.btn--success {
+    background-image: linear-gradient(
+      to right,
+      #1d976c 0%,
+      #6ee999 51%,
+      #1d976c 100%
+    );
+    color: white;
+
+    &.btn--hollow {
+      background: transparent;
+      border: 1px solid #1d976c;
+      color: #1d976c;
+
+      &:hover {
+        background: #1d976c;
+        color: white;
+      }
+    }
+  }
+
+  &.btn--danger {
+    background-image: linear-gradient(
+      to right,
+      #cb2d3e 0%,
+      #ef473a 51%,
+      #cb2d3e 100%
+    );
+    color: white;
+
+    &.btn--hollow {
+      background: transparent;
+      border: 1px solid #cb2d3e;
+      color: #cb2d3e;
+
+      &:hover {
+        background: #cb2d3e;
+        color: white;
+      }
+    }
+  }
+
+  &.btn--light {
+    background-image: linear-gradient(
+      to right,
+      #e2e2e2 0%,
+      #f6f6f6 51%,
+      #e2e2e2 100%
+    );
+
+    color: #0a1f44;
+
+    &.btn--hollow {
+      background: transparent;
+      border: 1px solid #e2e2e2;
+      color: #0a1f44;
+
+      &:hover {
+        background: #e2e2e2;
+        color: #0a1f44;
+      }
+    }
+  }
+
+  &.btn--dark {
+    background-image: linear-gradient(
+      to right,
+      #141e30 0%,
+      #243b55 51%,
+      #141e30 100%
+    );
+
+    color: white;
+
+    &.btn--hollow {
+      background: transparent;
+      border: 1px solid #141e30;
+      color: #141e30;
+
+      &:hover {
+        background: #141e30;
         color: white;
       }
     }
