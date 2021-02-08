@@ -1,17 +1,41 @@
 <template>
   <div class="home">
     <img alt="Vue logo" src="../assets/logo.png" />
-    <GlobalButton :is-primary="true">Global-Primary-Button</GlobalButton>
-    <GlobalButton :is-primary-hollow="true"
-      >Global-Primary-Hollow-Button</GlobalButton
-    >
-    <GlobalButton :is-primary="true" :is-tall="true"
-      >Global-Primary-Tall-Button</GlobalButton
-    >
-    <GlobalButton :is-primary="true" :is-short="true"
-      >Global-Primary-Short-Button</GlobalButton
-    >
-    <GlobalInput />
+
+    <h3>Global Buttons</h3>
+    <div class="home-button__wrapper">
+      <GlobalButton :is-primary="true">Global-Primary-Button</GlobalButton>
+      <GlobalButton :is-primary-hollow="true"
+        >Global-Primary-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-success="true">Global-success-Button</GlobalButton>
+      <GlobalButton :is-success-hollow="true"
+        >Global-success-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-warning="true">Global-warning-Button</GlobalButton>
+      <GlobalButton :is-warning-hollow="true"
+        >Global-warning-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-danger="true">Global-danger-Button</GlobalButton>
+      <GlobalButton :is-danger-hollow="true"
+        >Global-danger-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-light="true">Global-light-Button</GlobalButton>
+      <GlobalButton :is-light-hollow="true"
+        >Global-light-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-dark="true">Global-dark-Button</GlobalButton>
+      <GlobalButton :is-dark-hollow="true"
+        >Global-dark-Hollow-Button</GlobalButton
+      >
+      <GlobalButton :is-primary="true" :is-tall="true"
+        >Global-Primary-Tall-Button</GlobalButton
+      >
+      <GlobalButton :is-primary="true" :is-short="true"
+        >Global-Primary-Short-Button</GlobalButton
+      >
+      <GlobalInput />
+    </div>
   </div>
 </template>
 
@@ -20,3 +44,12 @@ export default {
   name: "Home",
 };
 </script>
+
+<style lang="scss">
+.home-button__wrapper {
+  margin: 0 80px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+</style>
