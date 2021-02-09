@@ -8,6 +8,7 @@ GlobalUI :+1: is an Open Source UI Kit built from VueJS. GlobalUI is a solution 
 
 - [Templates](#templates)
 - [Installation](#installation)
+- [Development](#development)
 - [Usage](#usage)
 - [Documentation](#documentation)
 - [Contributing](#contributing)
@@ -28,6 +29,24 @@ $ npm install global-ui --save
 ```bash
 $ yarn add global-ui
 ```
+
+## Development
+
+### Components Developed :
+
+- GlobalButton :heavy_check_mark:
+
+### Components On-Development :
+
+- GlobalInput :no_entry:
+- GlobalDropdown :no_entry:
+- GlobalAccordion :no_entry:
+- GlobalCheckbox :no_entry:
+- GlobalSwitch :no_entry:
+- GlobalBaseDialog :no_entry:
+- GlobalBaseDialog :no_entry:
+- GlobalPreloader :no_entry:
+- GlobalCanvasModal :no_entry:
 
 ## Usage
 
