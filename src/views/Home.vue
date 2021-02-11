@@ -37,6 +37,7 @@
     </div>
 
     <!-- ---------------------------- -->
+    <h3>Global Switch</h3>
     <div class="home__wrapper">
       <GlobalSwitch />
       <GlobalSwitch label="GlobalSwitch Label" />
@@ -53,6 +54,9 @@ export default {
 </script>
 
 <style lang="scss">
+.home {
+  margin-bottom: 40px;
+}
 .home-button__wrapper {
   margin: 0 80px;
   display: flex;
@@ -63,6 +67,7 @@ export default {
 .home__wrapper {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 0 40px;
   margin-top: 2rem;
 }

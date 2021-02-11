@@ -165,20 +165,20 @@ export default {
   &.btn--primary {
     background-image: linear-gradient(
       to right,
-      #0072ff 0%,
-      #00c6ff 51%,
-      #0072ff 100%
+      $primary1 0%,
+      $primary2 51%,
+      $primary1 100%
     );
-    color: white;
+    color: $white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #0072ff;
-      color: #0072ff;
+      border: 1px solid $primary1;
+      color: $primary1;
 
       &:hover {
-        background: #0072ff;
-        color: white;
+        background: $primary1;
+        color: $white;
       }
     }
   }
@@ -186,21 +186,21 @@ export default {
   &.btn--warning {
     background-image: linear-gradient(
       to right,
-      #ff8008 0%,
-      #ffc837 51%,
-      #ff8008 100%
+      $warning1 0%,
+      $warning2 51%,
+      $warning1 100%
     );
 
-    color: white;
+    color: $white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #ffaf19;
-      color: #ffaf19;
+      border: 1px solid $warning3;
+      color: $warning3;
 
       &:hover {
-        background: #ffaf19;
-        color: white;
+        background: $warning3;
+        color: $white;
       }
     }
   }
@@ -208,20 +208,20 @@ export default {
   &.btn--success {
     background-image: linear-gradient(
       to right,
-      #1d976c 0%,
-      #6ee999 51%,
-      #1d976c 100%
+      $success1 0%,
+      $success2 51%,
+      $success1 100%
     );
-    color: white;
+    color: $white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #1d976c;
-      color: #1d976c;
+      border: 1px solid $success1;
+      color: $success1;
 
       &:hover {
-        background: #1d976c;
-        color: white;
+        background: $success1;
+        color: $white;
       }
     }
   }
@@ -229,20 +229,20 @@ export default {
   &.btn--danger {
     background-image: linear-gradient(
       to right,
-      #cb2d3e 0%,
-      #ef473a 51%,
-      #cb2d3e 100%
+      $danger1 0%,
+      $danger2 51%,
+      $danger1 100%
     );
-    color: white;
+    color: $white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #cb2d3e;
-      color: #cb2d3e;
+      border: 1px solid $danger1;
+      color: $danger1;
 
       &:hover {
-        background: #cb2d3e;
-        color: white;
+        background: $danger1;
+        color: $white;
       }
     }
   }
@@ -250,21 +250,21 @@ export default {
   &.btn--light {
     background-image: linear-gradient(
       to right,
-      #e2e2e2 0%,
-      #f6f6f6 51%,
-      #e2e2e2 100%
+      $lightGrey2 0%,
+      $lightGrey3 51%,
+      $lightGrey2 100%
     );
 
-    color: #0a1f44;
+    color: $darkGrey1;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #e2e2e2;
-      color: #0a1f44;
+      border: 1px solid $lightGrey2;
+      color: $darkGrey1;
 
       &:hover {
-        background: #e2e2e2;
-        color: #0a1f44;
+        background: $lightGrey2;
+        color: $darkGrey1;
       }
     }
   }
@@ -272,21 +272,21 @@ export default {
   &.btn--dark {
     background-image: linear-gradient(
       to right,
-      #141e30 0%,
-      #243b55 51%,
-      #141e30 100%
+      $darkGrey2 0%,
+      $darkGrey3 51%,
+      $darkGrey2 100%
     );
 
-    color: white;
+    color: $white;
 
     &.btn--hollow {
       background: transparent;
-      border: 1px solid #141e30;
-      color: #141e30;
+      border: 1px solid $darkGrey2;
+      color: $darkGrey2;
 
       &:hover {
-        background: #141e30;
-        color: white;
+        background: $darkGrey2;
+        color: $white;
       }
     }
   }

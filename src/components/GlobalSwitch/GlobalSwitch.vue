@@ -51,7 +51,7 @@ export default {
     height: 0;
 
     &:checked + .slider {
-      background-color: #22c993;
+      background-color: $success3;
 
       &:before {
         transform: translateX(16px);
@@ -59,7 +59,7 @@ export default {
     }
 
     &:focus + .slider {
-      box-shadow: 0 0 1px #22c993;
+      box-shadow: 0 0 1px $success3;
     }
   }
 
@@ -68,7 +68,7 @@ export default {
     cursor: pointer;
     width: 40px;
     height: 22px;
-    background-color: #c9ced6;
+    background-color: $lightGrey4;
     transition: 0.4s;
     position: relative;
     display: inline-block;
@@ -80,7 +80,7 @@ export default {
       width: 14px;
       left: 5px;
       bottom: 4px;
-      background-color: white;
+      background-color: $white;
       box-shadow: 0 4px 4px rgba(10, 31, 68, 0.16);
       transition: 0.4s;
     }
