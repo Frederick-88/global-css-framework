@@ -34,7 +34,14 @@
       <GlobalButton :is-primary="true" :is-short="true"
         >Global-Primary-Short-Button</GlobalButton
       >
-      <GlobalInput />
+    </div>
+
+    <!-- ---------------------------- -->
+    <div class="home__wrapper">
+      <GlobalSwitch />
+      <GlobalSwitch label="GlobalSwitch Label" />
+      <GlobalSwitch :is-disabled="true" />
+      <GlobalSwitch :is-checked="true" />
     </div>
   </div>
 </template>
@@ -49,7 +56,17 @@ export default {
 .home-button__wrapper {
   margin: 0 80px;
   display: flex;
+  align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+}
+.home__wrapper {
+  display: flex;
+  align-items: center;
+  margin: 0 40px;
+  margin-top: 2rem;
+}
+.home__wrapper > * {
+  margin-right: 20px;
 }
 </style>
