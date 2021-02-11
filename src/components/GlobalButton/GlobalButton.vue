@@ -292,13 +292,13 @@ export default {
   }
 
   /* Types */
-  .btn--tall {
+  &.btn--tall {
     padding-top: 20px;
     padding-bottom: 20px;
   }
 
-  .btn--short {
-    padding: 10px 18px;
+  &.btn--short {
+    padding: 12px 18px;
   }
 }
 </style>
