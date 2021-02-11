@@ -59,7 +59,7 @@ export default {
     display: inline-block;
     padding: 10px 15px;
     border-radius: 8px;
-    border: 1px solid #78ff42;
+    border: 1px solid $primary2;
     font-family: "Work Sans", "Arial", "Helvetica", "sans-serif";
     font-weight: 500;
     font-size: 0.875em;
@@ -72,7 +72,7 @@ export default {
     }
 
     &:focus {
-      border-color: #58c02f;
+      border-color: $primary1;
     }
   }
 

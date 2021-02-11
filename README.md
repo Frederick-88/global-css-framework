@@ -35,6 +35,7 @@ $ yarn add global-ui
 ### Components Developed :
 
 - GlobalButton :heavy_check_mark:
+- GlobalSwitch :heavy_check_mark:
 
 ### Components On-Development :
 
@@ -42,8 +43,6 @@ $ yarn add global-ui
 - GlobalDropdown :no_entry:
 - GlobalAccordion :no_entry:
 - GlobalCheckbox :no_entry:
-- GlobalSwitch :no_entry:
-- GlobalBaseDialog :no_entry:
 - GlobalBaseDialog :no_entry:
 - GlobalPreloader :no_entry:
 - GlobalCanvasModal :no_entry:
