@@ -35,9 +35,6 @@ export default {
 
 <style lang="scss">
 .switch {
-  display: inline-flex;
-  justify-content: space-between;
-  align-items: center;
   position: relative;
   cursor: pointer;
 
@@ -74,6 +71,7 @@ export default {
     display: inline-block;
 
     &:before {
+      // using a lot :before because the wrapper is only 1 - if dont want to use before try 2 wrapper with "position: absolute" then
       position: absolute;
       content: "";
       height: 14px;
