@@ -36,13 +36,13 @@ $ yarn add global-ui
 
 - GlobalButton :heavy_check_mark:
 - GlobalSwitch :heavy_check_mark:
+- GlobalCheckbox :heavy_check_mark:
 
 ### Components On-Development :
 
 - GlobalInput :no_entry:
 - GlobalDropdown :no_entry:
 - GlobalAccordion :no_entry:
-- GlobalCheckbox :no_entry:
 - GlobalBaseDialog :no_entry:
 - GlobalPreloader :no_entry:
 - GlobalCanvasModal :no_entry:
@@ -121,6 +121,7 @@ Currently still in development. :muscle: :v:
 
 ## Reference
 
+- http://offeo.com/
 - https://gradientbuttons.colorion.co/
 
 ### ----------------------------------
