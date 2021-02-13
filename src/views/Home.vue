@@ -44,6 +44,19 @@
       <GlobalSwitch :is-disabled="true" />
       <GlobalSwitch :is-checked="true" />
     </div>
+
+    <!-- ---------------------------- -->
+    <h3>Global Checkbox</h3>
+    <div class="home__wrapper">
+      <input type="checkbox" />
+      <GlobalCheckbox />
+      <GlobalCheckbox label="remember me" />
+      <GlobalCheckbox :is-checked="true" label="checked-default" />
+      <GlobalCheckbox :is-checked="true" :is-primary="true" label="primary" />
+      <GlobalCheckbox :is-checked="true" :is-success="true" label="success" />
+      <GlobalCheckbox :is-checked="true" :is-warning="true" label="warning" />
+      <GlobalCheckbox :is-checked="true" :is-danger="true" label="danger" />
+    </div>
   </div>
 </template>
 
