@@ -196,7 +196,7 @@ export default {
     &.btn--hollow {
       background: transparent;
       border: 1px solid $warning3;
-      color: $warning3;
+      color: $warning1;
 
       &:hover {
         background: $warning3;
