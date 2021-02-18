@@ -35,12 +35,12 @@ $ yarn add global-ui
 ### Components Developed :
 
 - GlobalButton :heavy_check_mark:
+- GlobalInput :heavy_check_mark:
 - GlobalSwitch :heavy_check_mark:
 - GlobalCheckbox :heavy_check_mark:
 
 ### Components On-Development :
 
-- GlobalInput :no_entry:
 - GlobalDropdown :no_entry:
 - GlobalAccordion :no_entry:
 - GlobalBaseDialog :no_entry:
@@ -73,7 +73,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import GlobalUIs from "global-ui";
 
-// "GlobalUis" -> you can change the name to anything that you want
+// "GlobalUIs" -> you can change the name to anything that you want
 Vue.use(GlobalUIs);
 
 new Vue({
