@@ -36,7 +36,7 @@
       >
     </div>
 
-    <!-- ---------------------------- -->
+    <!------------------------------- -->
     <h3>Global Switch</h3>
     <div class="home__wrapper">
       <GlobalSwitch />
@@ -45,7 +45,7 @@
       <GlobalSwitch :is-checked="true" />
     </div>
 
-    <!-- ---------------------------- -->
+    <!------------------------------- -->
     <h3>Global Checkbox</h3>
     <div class="home__wrapper">
       <input type="checkbox" />
@@ -56,6 +56,30 @@
       <GlobalCheckbox :is-checked="true" :is-success="true" label="success" />
       <GlobalCheckbox :is-checked="true" :is-warning="true" label="warning" />
       <GlobalCheckbox :is-checked="true" :is-danger="true" label="danger" />
+    </div>
+
+    <!------------------------------- -->
+    <h3>Global Input</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalInput />
+      <GlobalInput placeholder="Disabled Input" :is-disabled="true" />
+      <GlobalInput placeholder="Readonly Input" :is-read-only="true" />
+      <GlobalInput value="Input with value in first place" />
+      <GlobalInput type="password" value="password" />
+    </div>
+    <div class="home__wrapper--no-flex">
+      <GlobalInput label="Your phone number?" placeholder="085835538888" />
+      <GlobalInput :is-tall="true" placeholder="Tall Input" />
+      <GlobalInput :is-short="true" placeholder="Short Input" />
+    </div>
+    <div class="home__wrapper--no-flex">
+      <GlobalInput :is-success="true" message="Your input success message" />
+      <br />
+      <br />
+      <GlobalInput :is-warning="true" message="Your input warning message" />
+      <br />
+      <br />
+      <GlobalInput :is-error="true" message="Your input error message" />
     </div>
   </div>
 </template>
@@ -79,11 +103,22 @@ export default {
 }
 .home__wrapper {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   margin: 0 40px;
   margin-top: 2rem;
 }
+
+.home__wrapper--no-flex {
+  margin: 0 40px;
+  margin-top: 2rem;
+}
+
+.home__wrapper--no-flex > * {
+  margin-top: 10px;
+}
+
 .home__wrapper > * {
   margin-right: 20px;
 }
