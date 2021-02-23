@@ -73,7 +73,7 @@ import Vue from "vue";
 import App from "./App.vue";
 import GlobalUIs from "global-ui";
 
-// "GlobalUIs" -> you can change the name to anything that you want
+// You can change "GlobalUIs" naming to anything that you want
 Vue.use(GlobalUIs);
 
 new Vue({
@@ -121,7 +121,7 @@ Currently still in development. :muscle: :v:
 
 ## Reference
 
-- http://offeo.com/
+- https://offeo.com/
 - https://gradientbuttons.colorion.co/
 
 ### ----------------------------------
