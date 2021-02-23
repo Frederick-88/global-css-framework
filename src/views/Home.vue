@@ -3,6 +3,8 @@
     <img alt="Vue logo" src="../assets/logo.png" />
 
     <h3>Global Buttons</h3>
+    <i class="icon icon-lock" style="color: black"></i>
+    <i class="icon icon-close" style="color: black"></i>
     <div class="home-button__wrapper">
       <GlobalButton :is-primary="true">Global-Primary-Button</GlobalButton>
       <GlobalButton :is-primary-hollow="true"
@@ -91,6 +93,8 @@ export default {
 </script>
 
 <style lang="scss">
+@import "@/assets/icomoon/style.scss";
+
 .home {
   margin-bottom: 40px;
 }
