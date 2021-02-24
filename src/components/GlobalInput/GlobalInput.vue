@@ -21,10 +21,10 @@
     <template v-if="(message && isSuccess) || isWarning || isError">
       <div :class="messageClassList">
         <template v-if="isSuccess">
-          <i class="icon icon-tick-solid"></i>
+          <i class="icon icon-tick-circle"></i>
         </template>
         <template v-else-if="isWarning">
-          <i class="icon icon-alert"></i>
+          <i class="icon icon-notice"></i>
         </template>
         <template v-else-if="isError">
           <i class="icon icon-close-solid"></i>
