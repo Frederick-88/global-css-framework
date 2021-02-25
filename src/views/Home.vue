@@ -83,12 +83,42 @@
       <br />
       <GlobalInput :is-error="true" message="Your input error message" />
     </div>
+
+    <!------------------------------- -->
+    <h3 style="margin-top: 100px">Global Accordion</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalAccordion :items="accordionItems" icon="caret" />
+      <GlobalAccordion :items="accordionItems" icon="plus" :is-primary="true" />
+      <GlobalAccordion
+        :items="accordionItems"
+        icon="caret"
+        :is-success="true"
+      />
+      <GlobalAccordion :items="accordionItems" icon="plus" :is-warning="true" />
+      <GlobalAccordion :items="accordionItems" icon="caret" :is-danger="true" />
+      <GlobalAccordion :items="accordionItems" icon="plus" :is-dark="true" />
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: "Home",
+  data() {
+    return {
+      accordionItems: [
+        {
+          title: "Accordion 1",
+          text: "This is the value / content of Accordion 1",
+        },
+        {
+          title: "Accordion 2",
+          text: "This is the value / content of Accordion 2",
+          isActive: true,
+        },
+      ],
+    };
+  },
 };
 </script>
 

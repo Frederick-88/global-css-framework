@@ -15,8 +15,6 @@ export default {
 
     // Colors
     isPrimary: { type: Boolean, default: false },
-    isLight: { type: Boolean, default: false },
-    isDark: { type: Boolean, default: false },
     isSuccess: { type: Boolean, default: false },
     isWarning: { type: Boolean, default: false },
     isDanger: { type: Boolean, default: false },
