@@ -4,5 +4,12 @@ import GlobalButton from "./GlobalButton/GlobalButton.vue";
 import GlobalInput from "./GlobalInput/GlobalInput.vue";
 import GlobalSwitch from "./GlobalSwitch/GlobalSwitch.vue";
 import GlobalCheckbox from "./GlobalCheckbox/GlobalCheckbox.vue";
+import GlobalAccordion from "./GlobalAccordion/GlobalAccordion.vue";
 
-export { GlobalButton, GlobalInput, GlobalSwitch, GlobalCheckbox };
+export {
+  GlobalButton,
+  GlobalInput,
+  GlobalSwitch,
+  GlobalCheckbox,
+  GlobalAccordion,
+};
