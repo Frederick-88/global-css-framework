@@ -98,6 +98,25 @@
       <GlobalAccordion :items="accordionItems" icon="caret" :is-danger="true" />
       <GlobalAccordion :items="accordionItems" icon="plus" :is-dark="true" />
     </div>
+
+    <!------------------------------- -->
+    <h3>Global Dropdown</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalDropdown :options="dropdownItems" />
+      <GlobalDropdown
+        :options="dropdownItems"
+        value="blue"
+        :auto-complete="true"
+        autoCompletePlaceholder="Search Here"
+        max-width="600px"
+      />
+      <GlobalDropdown
+        :options="dropdownItems"
+        value="blue"
+        max-width="300px"
+        max-height="60px"
+      />
+    </div>
   </div>
 </template>
 
@@ -106,6 +125,14 @@ export default {
   name: "Home",
   data() {
     return {
+      dropdownItems: [
+        { name: "Red", value: "red" },
+        { name: "Green", value: "green" },
+        { name: "Blue", value: "blue" },
+        { name: "Red2", value: "red2" },
+        { name: "Green2", value: "green2" },
+        { name: "Blue2", value: "blue2" },
+      ],
       accordionItems: [
         {
           title: "Accordion 1",
