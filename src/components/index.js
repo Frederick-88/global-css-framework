@@ -6,6 +6,7 @@ import GlobalSwitch from "./GlobalSwitch/GlobalSwitch.vue";
 import GlobalCheckbox from "./GlobalCheckbox/GlobalCheckbox.vue";
 import GlobalAccordion from "./GlobalAccordion/GlobalAccordion.vue";
 import GlobalDropdown from "./GlobalDropdown/GlobalDropdown.vue";
+import GlobalAnimationLoader from "./GlobalAnimationLoader/GlobalAnimationLoader.vue";
 
 export {
   GlobalButton,
@@ -14,4 +15,5 @@ export {
   GlobalCheckbox,
   GlobalAccordion,
   GlobalDropdown,
+  GlobalAnimationLoader,
 };

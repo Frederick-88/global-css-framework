@@ -40,11 +40,11 @@ $ yarn add global-ui
 - GlobalCheckbox :heavy_check_mark:
 - GlobalAccordion :heavy_check_mark:
 - GlobalDropdown :heavy_check_mark:
+- GlobalAnimationLoader :heavy_check_mark:
 
 ### Components On-Development :
 
 - GlobalBaseDialog :no_entry:
-- GlobalPreloader :no_entry:
 - GlobalCanvasModal :no_entry:
 
 ## Usage
