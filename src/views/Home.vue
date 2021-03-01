@@ -117,14 +117,30 @@
         max-height="60px"
       />
     </div>
+
+    <!------------------------------- -->
+    <h3>Global Preloader</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalPreloader
+        :file="jsonFile2"
+        :width="400"
+        text="Human JSON animated by After Effects"
+      />
+      <GlobalPreloader :file="jsonFile" text="Default width/size" />
+    </div>
   </div>
 </template>
 
 <script>
+import laptopWorkingJson from "@/assets/files/laptop-working.json";
+import TrainBuildingJson from "@/assets/files/train-building-animation.json";
+
 export default {
   name: "Home",
   data() {
     return {
+      jsonFile: TrainBuildingJson,
+      jsonFile2: laptopWorkingJson,
       dropdownItems: [
         { name: "Red", value: "red" },
         { name: "Green", value: "green" },
