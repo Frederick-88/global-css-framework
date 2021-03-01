@@ -1,9 +1,9 @@
 <template>
-  <div class="preloader">
-    <div class="preloader__image" :style="styleObject">
+  <div class="animation-loader">
+    <div class="animation-loader__image" :style="styleObject">
       <Lottie :options="selectedLottieOption"></Lottie>
     </div>
-    <div class="preloader__text" v-if="text" v-html="text"></div>
+    <div class="animation-loader__text" v-if="text" v-html="text"></div>
   </div>
 </template>
 
@@ -11,19 +11,19 @@
 import Lottie from "./LottieWeb.vue";
 
 export default {
-  name: "GlobalPreloader",
+  name: "GlobalAnimationLoader",
   components: {
     Lottie,
   },
   props: {
-    // preloader text
+    // GlobalAnimationLoader text
     text: { type: String, default: "" },
 
-    // preloader sizes
+    // GlobalAnimationLoader sizes
     width: { type: Number, default: 80 },
     height: { type: Number, default: 0 },
 
-    // JSON file of the preloader
+    // JSON file of the GlobalAnimationLoader
     file: {
       type: Object,
       default: () => ({}),
@@ -52,7 +52,7 @@ export default {
 </script>
 
 <style lang="scss">
-.preloader {
+.animation-loader {
   display: block;
   height: 100%;
   width: 100%;
@@ -64,12 +64,12 @@ export default {
   flex-direction: column;
 }
 
-.preloader__image {
+.animation-loader__image {
   margin: 0 auto;
   position: relative;
 }
 
-.preloader__text {
+.animation-loader__text {
   display: block;
   font-size: 0.875rem;
 }

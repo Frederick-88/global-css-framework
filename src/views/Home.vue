@@ -121,12 +121,12 @@
     <!------------------------------- -->
     <h3>Global Preloader</h3>
     <div class="home__wrapper--no-flex">
-      <GlobalPreloader
+      <GlobalAnimationLoader
         :file="jsonFile2"
         :width="400"
         text="Human JSON animated by After Effects"
       />
-      <GlobalPreloader :file="jsonFile" text="Default width/size" />
+      <GlobalAnimationLoader :file="jsonFile" text="Default width/size" />
     </div>
   </div>
 </template>
