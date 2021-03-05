@@ -295,6 +295,8 @@ export default {
   &.btn--tall {
     padding-top: 20px;
     padding-bottom: 20px;
+    font-size: 0.825rem;
+    font-weight: 600;
   }
 
   &.btn--short {
