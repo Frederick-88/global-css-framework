@@ -2,11 +2,11 @@
 
 @font-face {
   font-family: '#{$icomoon-font-family}';
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?17jwdu');
-  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?17jwdu#iefix') format('embedded-opentype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?17jwdu') format('truetype'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?17jwdu') format('woff'),
-    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?17jwdu##{$icomoon-font-family}') format('svg');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf56ez');
+  src:  url('#{$icomoon-font-path}/#{$icomoon-font-family}.eot?qf56ez#iefix') format('embedded-opentype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.ttf?qf56ez') format('truetype'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.woff?qf56ez') format('woff'),
+    url('#{$icomoon-font-path}/#{$icomoon-font-family}.svg?qf56ez##{$icomoon-font-family}') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -30,6 +30,16 @@
 .icon-edit-2 {
   &:before {
     content: $icon-edit-2; 
+  }
+}
+.icon-info-line {
+  &:before {
+    content: $icon-info-line; 
+  }
+}
+.icon-checkmark {
+  &:before {
+    content: $icon-checkmark; 
   }
 }
 .icon-eye-off-solid {
@@ -297,6 +307,11 @@
     content: $icon-info; 
   }
 }
+.icon-checkmark-outline {
+  &:before {
+    content: $icon-checkmark-outline; 
+  }
+}
 .icon-thumbs-up {
   &:before {
     content: $icon-thumbs-up; 
@@ -340,6 +355,16 @@
 .icon-connection {
   &:before {
     content: $icon-connection; 
+  }
+}
+.icon-warning {
+  &:before {
+    content: $icon-warning; 
+  }
+}
+.icon-notification {
+  &:before {
+    content: $icon-notification; 
   }
 }
 

@@ -7,6 +7,7 @@ import GlobalCheckbox from "./GlobalCheckbox/GlobalCheckbox.vue";
 import GlobalAccordion from "./GlobalAccordion/GlobalAccordion.vue";
 import GlobalDropdown from "./GlobalDropdown/GlobalDropdown.vue";
 import GlobalAnimationLoader from "./GlobalAnimationLoader/GlobalAnimationLoader.vue";
+import GlobalBaseDialog from "./GlobalBaseDialog/GlobalBaseDialog.vue";
 
 export {
   GlobalButton,
@@ -16,4 +17,5 @@ export {
   GlobalAccordion,
   GlobalDropdown,
   GlobalAnimationLoader,
+  GlobalBaseDialog,
 };

@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?17jwdu');
-  src:  url('fonts/icomoon.eot?17jwdu#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?17jwdu') format('truetype'),
-    url('fonts/icomoon.woff?17jwdu') format('woff'),
-    url('fonts/icomoon.svg?17jwdu#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?qf56ez');
+  src:  url('fonts/icomoon.eot?qf56ez#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?qf56ez') format('truetype'),
+    url('fonts/icomoon.woff?qf56ez') format('woff'),
+    url('fonts/icomoon.svg?qf56ez#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -27,6 +27,12 @@
 
 .icon-edit-2:before {
   content: "\e9d0";
+}
+.icon-info-line:before {
+  content: "\e958";
+}
+.icon-checkmark:before {
+  content: "\e94b";
 }
 .icon-eye-off-solid:before {
   content: "\e9cd";
@@ -187,6 +193,9 @@
 .icon-info:before {
   content: "\e99d";
 }
+.icon-checkmark-outline:before {
+  content: "\e900";
+}
 .icon-thumbs-up:before {
   content: "\e9ba";
 }
@@ -213,4 +222,10 @@
 }
 .icon-connection:before {
   content: "\e91b";
+}
+.icon-warning:before {
+  content: "\ea07";
+}
+.icon-notification:before {
+  content: "\ea08";
 }
