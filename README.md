@@ -41,10 +41,10 @@ $ yarn add global-ui
 - GlobalAccordion :heavy_check_mark:
 - GlobalDropdown :heavy_check_mark:
 - GlobalAnimationLoader :heavy_check_mark:
+- GlobalBaseDialog :heavy_check_mark:
 
 ### Components On-Development :
 
-- GlobalBaseDialog :no_entry:
 - GlobalCanvasModal :no_entry:
 
 ## Usage

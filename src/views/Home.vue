@@ -128,18 +128,83 @@
       />
       <GlobalAnimationLoader :file="jsonFile" text="Default width/size" />
     </div>
+
+    <!------------------------------- -->
+    <h3>Global Base Dialog</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalButton :is-primary="true" @click="isShowPrimaryDialog = true"
+        >Open default dialog</GlobalButton
+      >
+      <GlobalBaseDialog
+        :is-primary="true"
+        :is-show="isShowPrimaryDialog"
+        title="Default dialog title"
+        text="This is a dialog description"
+        button1Text="yes"
+        button2Text="no"
+        @closeOverlay="isShowPrimaryDialog = false"
+      >
+        <p>This is a slot</p>
+      </GlobalBaseDialog>
+
+      <GlobalButton :is-warning="true" @click="isShowWarningDialog = true"
+        >Open default dialog</GlobalButton
+      >
+      <GlobalBaseDialog
+        :isFullWidthButtons="true"
+        :is-warning="true"
+        :width="400"
+        :is-show="isShowWarningDialog"
+        title="Default dialog title"
+        text="This is a dialog description"
+        @closeOverlay="isShowWarningDialog = false"
+      >
+        <p>This is a slot</p>
+      </GlobalBaseDialog>
+
+      <GlobalButton :is-danger="true" @click="isShowDangerDialog = true"
+        >Open default dialog</GlobalButton
+      >
+      <GlobalBaseDialog
+        :is-danger="true"
+        :noButton="true"
+        :is-show="isShowDangerDialog"
+        title="Default dialog title"
+        text="This is a dialog description"
+        @closeOverlay="isShowDangerDialog = false"
+      >
+        <p>This is a slot</p>
+      </GlobalBaseDialog>
+
+      <GlobalButton :is-success="true" @click="isShowSuccessDialog = true"
+        >Open default dialog</GlobalButton
+      >
+      <GlobalBaseDialog
+        :is-success="true"
+        :is-show="isShowSuccessDialog"
+        title="Default dialog title"
+        text="This is a dialog description"
+        @closeOverlay="isShowSuccessDialog = false"
+      >
+        <p>This is a slot</p>
+      </GlobalBaseDialog>
+    </div>
   </div>
 </template>
 
 <script>
 import laptopWorkingJson from "@/assets/files/laptop-working.json";
-import TrainBuildingJson from "@/assets/files/train-building-animation.json";
+import rocketLoader from "@/assets/files/rocket-loader.json";
 
 export default {
   name: "Home",
   data() {
     return {
-      jsonFile: TrainBuildingJson,
+      isShowPrimaryDialog: false,
+      isShowWarningDialog: false,
+      isShowDangerDialog: false,
+      isShowSuccessDialog: false,
+      jsonFile: rocketLoader,
       jsonFile2: laptopWorkingJson,
       dropdownItems: [
         { name: "Red", value: "red" },
