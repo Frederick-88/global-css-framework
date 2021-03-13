@@ -1,6 +1,6 @@
 {
   "name": "global-ui",
-  "version": "2.1.0",
+  "version": "2.1.1",
   "description": "Vue.js UI Components Library - Made for NuxtJS & VueJS Developers.",
   "keywords": [
     "global ui"
@@ -16,6 +16,7 @@
       "url": "https://fdtech.asia"
     }
   ],
+  "license": "MIT",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build"
