@@ -15,6 +15,7 @@ module.exports = {
         data: `
           @import '@/assets/styles/variables.scss';
           @import '@/assets/icomoon/variables.scss';
+          @import '@/assets/styles/deviceMixins.scss';
         `,
       },
     },

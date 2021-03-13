@@ -132,6 +132,20 @@
     <!------------------------------- -->
     <h3>Global Base Dialog</h3>
     <div class="home__wrapper--no-flex">
+      <GlobalButton @click="isShowDefaultDialog = true"
+        >Open default dialog</GlobalButton
+      >
+      <GlobalBaseDialog
+        :is-show="isShowDefaultDialog"
+        title="Default dialog title"
+        text="This is a dialog description"
+        button1Text="yes"
+        button2Text="no"
+        @closeOverlay="isShowDefaultDialog = false"
+      >
+        <p>This is a slot</p>
+      </GlobalBaseDialog>
+
       <GlobalButton :is-primary="true" @click="isShowPrimaryDialog = true"
         >Open default dialog</GlobalButton
       >
@@ -189,6 +203,75 @@
         <p>This is a slot</p>
       </GlobalBaseDialog>
     </div>
+    <!------------------------------- -->
+    <h3>Global Canvas Modal</h3>
+    <div class="home__wrapper--no-flex">
+      <GlobalButton @click="isShowDefaultCanvasModal = true"
+        >Open default canvas modal</GlobalButton
+      >
+      <GlobalCanvasModal
+        :is-show="isShowDefaultCanvasModal"
+        @close="isShowDefaultCanvasModal = false"
+      >
+        <h3 style="margin-top: 0">Welcome!</h3>
+        <p>This is the slot part of canvas modal</p>
+      </GlobalCanvasModal>
+
+      <GlobalButton :is-primary="true" @click="isShowPrimaryCanvasModal = true"
+        >Open primary canvas modal</GlobalButton
+      >
+      <GlobalCanvasModal
+        :is-show="isShowPrimaryCanvasModal"
+        title="It's Youtube Day! - Primary"
+        icon="icon-youtube"
+        @close="isShowPrimaryCanvasModal = false"
+      >
+        <h3 style="margin-top: 0">Welcome!</h3>
+        <p>This is the slot part of canvas modal</p>
+      </GlobalCanvasModal>
+
+      <GlobalButton :is-warning="true" @click="isShowWarningCanvasModal = true"
+        >Open warning canvas modal</GlobalButton
+      >
+      <GlobalCanvasModal
+        :is-warning="true"
+        :is-show="isShowWarningCanvasModal"
+        title="It's Youtube Day! - Primary"
+        icon="icon-youtube"
+        @close="isShowWarningCanvasModal = false"
+      >
+        <h3 style="margin-top: 0">Welcome!</h3>
+        <p>This is the slot part of canvas modal</p>
+      </GlobalCanvasModal>
+
+      <GlobalButton :is-success="true" @click="isShowSuccessCanvasModal = true"
+        >Open success canvas modal</GlobalButton
+      >
+      <GlobalCanvasModal
+        :is-success="true"
+        :is-show="isShowSuccessCanvasModal"
+        title="It's Youtube Day! - Primary"
+        icon="icon-youtube"
+        @close="isShowSuccessCanvasModal = false"
+      >
+        <h3 style="margin-top: 0">Welcome!</h3>
+        <p>This is the slot part of canvas modal</p>
+      </GlobalCanvasModal>
+
+      <GlobalButton :is-danger="true" @click="isShowDangerCanvasModal = true"
+        >Open danger canvas modal</GlobalButton
+      >
+      <GlobalCanvasModal
+        :is-danger="true"
+        :is-show="isShowDangerCanvasModal"
+        title="It's Youtube Day! - Primary"
+        icon="icon-youtube"
+        @close="isShowDangerCanvasModal = false"
+      >
+        <h3 style="margin-top: 0">Welcome!</h3>
+        <p>This is the slot part of canvas modal</p>
+      </GlobalCanvasModal>
+    </div>
   </div>
 </template>
 
@@ -200,10 +283,18 @@ export default {
   name: "Home",
   data() {
     return {
+      isShowDefaultCanvasModal: false,
+      isShowPrimaryCanvasModal: false,
+      isShowWarningCanvasModal: false,
+      isShowDangerCanvasModal: false,
+      isShowSuccessCanvasModal: false,
+
+      isShowDefaultDialog: false,
       isShowPrimaryDialog: false,
       isShowWarningDialog: false,
       isShowDangerDialog: false,
       isShowSuccessDialog: false,
+
       jsonFile: rocketLoader,
       jsonFile2: laptopWorkingJson,
       dropdownItems: [
