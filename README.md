@@ -42,10 +42,11 @@ $ yarn add global-ui
 - GlobalDropdown :heavy_check_mark:
 - GlobalAnimationLoader :heavy_check_mark:
 - GlobalBaseDialog :heavy_check_mark:
+- GlobalCanvasModal :heavy_check_mark:
 
 ### Components On-Development :
 
-- GlobalCanvasModal :no_entry:
+- Currently there are no further development plans :no_entry:
 
 ## Usage
 
@@ -53,7 +54,7 @@ Several options are available:
 
 ## Vue
 
-To use it like this :
+To use it like this in your component :
 
 ```
 <template>
