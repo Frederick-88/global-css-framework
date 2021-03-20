@@ -11,6 +11,9 @@ export default {
   name: "GlobalCheckbox",
   props: {
     isChecked: { type: Boolean, default: false },
+    /**
+     * The label for the checkbox
+     */
     label: { type: String, default: "" },
 
     // Colors

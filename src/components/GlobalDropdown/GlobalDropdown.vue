@@ -43,7 +43,7 @@ export default {
   },
   props: {
     /**
-     * The options need to have value and name
+     * The options need to have value and name <br/>
      * eg. { name: 'Name', value: 'Value' }
      */
     options: {
@@ -51,10 +51,16 @@ export default {
       default: () => [],
       required: true,
     },
+    /**
+     * Something like "Pick Your Color Here!"
+     */
     placeholder: {
       type: String,
       default: "",
     },
+    /**
+     * Value sent will be value from the options props that you want to show up first ( e.g 'blue', 'red', etc )
+     */
     value: {
       type: String,
       default: "",
@@ -73,10 +79,16 @@ export default {
       type: [String, Number],
       default: "300px",
     },
+    /**
+     * Will display search bar in your dropdown to search the option you want
+     */
     autoComplete: {
       type: Boolean,
       default: false,
     },
+    /**
+     * if 'autoComplete' props is true, need to use this as your placeholder
+     */
     autoCompletePlaceholder: {
       type: String,
       default: "Search",

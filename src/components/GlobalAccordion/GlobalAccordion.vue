@@ -30,23 +30,26 @@ export default {
   },
   props: {
     /**
-     * The items need to have title and text.
-     * eg. { title: 'Name', text: 'Text' }
-     * If you want the item to be automatically opened from beginning, set "isActive" to true
-     * eg. { title: 'Name', text: 'Text', isActive: true }
+     * The items need to have title and text. <br/>
+     * eg. [{ title: 'Name', text: 'Text' }] <br/>
+     * If you want the item to be automatically opened from beginning, set "isActive" to true <br/>
+     * eg. [{ title: 'Name', text: 'Text', isActive: true }]
      */
     items: {
       type: Array,
       default: () => [],
       required: true,
     },
-
-    // The options are: '', 'caret', 'plus'
+    /**
+     * The options are: '', 'caret', 'plus'
+     */
     icon: {
       type: String,
       default: "",
     },
-
+    /**
+     * Allow Accordion to be open more than 1
+     */
     allowMultiple: {
       type: Boolean,
       default: false,

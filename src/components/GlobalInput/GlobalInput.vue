@@ -43,15 +43,24 @@ export default {
     label: { type: String, default: "" },
     placeholder: { type: String, default: "" },
     value: { type: String, default: "" },
-    message: { type: String, default: "" },
-
     isDisabled: { type: Boolean, default: false },
     isReadOnly: { type: Boolean, default: false },
+    /**
+     * Tall Height of the input
+     */
     isTall: { type: Boolean, default: false },
+    /**
+     * Short Height of the input
+     */
     isShort: { type: Boolean, default: false },
+
     isWarning: { type: Boolean, default: false },
     isSuccess: { type: Boolean, default: false },
     isError: { type: Boolean, default: false },
+    /**
+     * When you set isWarning / isError / isSuccess props become 'true', you need to give add 'message' props.
+     */
+    message: { type: String, default: "" },
   },
 
   computed: {
@@ -120,6 +129,7 @@ export default {
     color: $black;
     margin: 0;
     outline: 0;
+    box-sizing: border-box; //make sure input doesn't overflowing parent
 
     &:disabled {
       color: $lightGrey5;
@@ -159,7 +169,6 @@ export default {
     font-size: 0.75rem;
     width: 100%;
     background: $white;
-    box-shadow: 0 3px 4px rgba(10, 31, 68, 0.1);
     padding: 10px;
     z-index: 1;
 

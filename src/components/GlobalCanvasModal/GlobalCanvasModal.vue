@@ -43,6 +43,11 @@ export default {
   name: "GlobalCanvasModal",
   props: {
     title: { type: String, default: "" },
+    /**
+     * Make sure you have icon files so you can define your own icon in your place <br/>
+     * Here, we integrated icomoon then we can have icon by adding "icon-tick" class. <br/>
+     * So, for the 'icon' props we can just put "icon-tick"
+     */
     icon: { type: String, default: "" },
     isShow: { type: Boolean, default: false },
     maxWidth: { type: Number, default: 0 },

@@ -23,7 +23,10 @@ export default {
     width: { type: Number, default: 80 },
     height: { type: Number, default: 0 },
 
-    // JSON file of the GlobalAnimationLoader
+    /**
+     * To use GlobalAnimationLoader you need to import your JSON file <br/>
+     * and define it as 'Vue/Nuxt Data( ) Attribute', then you can send it as a prop.
+     */
     file: {
       type: Object,
       default: () => ({}),
