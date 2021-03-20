@@ -120,6 +120,7 @@ export default {
     color: $black;
     margin: 0;
     outline: 0;
+    box-sizing: border-box;
 
     &:disabled {
       color: $lightGrey5;
@@ -159,7 +160,6 @@ export default {
     font-size: 0.75rem;
     width: 100%;
     background: $white;
-    box-shadow: 0 3px 4px rgba(10, 31, 68, 0.1);
     padding: 10px;
     z-index: 1;
 

@@ -76,6 +76,14 @@ export default {
     propClass() {
       const classList = [];
 
+      if (this.isDisabled) {
+        classList.push("btn--disabled");
+      }
+
+      if (this.href) {
+        classList.push("btn--anchor");
+      }
+
       if (this.isPrimary) {
         classList.push("btn--primary");
       }
@@ -84,7 +92,21 @@ export default {
         classList.push("btn--primary btn--hollow");
       }
 
-      if (this.isLight) {
+      const noColorDefined =
+        !this.isPrimary &&
+        !this.isSuccess &&
+        !this.isWarning &&
+        !this.isDanger &&
+        !this.isDark;
+      const noHollowDefined =
+        !this.isPrimaryHollow &&
+        !this.isSuccessHollow &&
+        !this.isWarningHollow &&
+        !this.isDangerHollow &&
+        !this.isLightHollow &&
+        !this.isDarkHollow;
+      // by default will be light
+      if (noColorDefined && noHollowDefined) {
         classList.push("btn--light");
       }
 
@@ -142,6 +164,7 @@ export default {
 .btn {
   display: block;
   margin: 10px;
+  font-size: 0.825rem;
   padding: 15px 30px;
   border-radius: 10px;
   text-align: center;
@@ -159,6 +182,19 @@ export default {
   &:hover {
     box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.15);
     background-position: right center; /* change the direction of the change here */
+  }
+
+  &.btn--disabled {
+    cursor: default;
+    opacity: 0.5;
+    &:hover {
+      background-position: initial;
+    }
+  }
+
+  &.btn--anchor {
+    display: inline-block;
+    font-size: 0.875rem;
   }
 
   /* Colors */
@@ -296,7 +332,6 @@ export default {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 0.825rem;
-    font-weight: 600;
   }
 
   &.btn--short {
