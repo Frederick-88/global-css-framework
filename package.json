@@ -20,7 +20,8 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
-    "storybook": "start-storybook -p 8000 --no-manager-cache"
+    "storybook": "start-storybook -p 8000 --no-manager-cache",
+    "build-static-webapp": "expo build:web"
   },
   "dependencies": {
     "@storybook/addon-actions": "^6.1.21",
