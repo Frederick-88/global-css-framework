@@ -107,7 +107,7 @@ Coming Soon :eyes:
 
 ## Documentation
 
-Currently still in development. :muscle: :v:
+https://global-ui-docs.netlify.app/ :bulb:
 
 ## Contributing
 
