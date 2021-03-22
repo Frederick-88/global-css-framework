@@ -42,11 +42,10 @@ $ yarn add global-ui
 - GlobalDropdown :heavy_check_mark:
 - GlobalAnimationLoader :heavy_check_mark:
 - GlobalBaseDialog :heavy_check_mark:
-- GlobalCanvasModal :heavy_check_mark:
 
 ### Components On-Development :
 
-- Currently there are no further development plans :no_entry:
+- GlobalCanvasModal :no_entry:
 
 ## Usage
 

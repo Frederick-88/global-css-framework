@@ -1,8 +1,8 @@
 <template>
   <component
-    :is="type"
-    :type="type === 'button' ? type : ''"
-    class="btn"
+    :is="buttonType"
+    :type="buttonType === 'button' ? buttonType : ''"
+    class="global-button"
     :class="[propClass]"
     :title="title"
     :to="to"
@@ -11,9 +11,7 @@
     @click="$emit('click', $event)"
     :target="newTab ? '_blank' : false"
   >
-    <span class="btn__content">
-      <span><slot></slot></span>
-    </span>
+    <span><slot></slot></span>
   </component>
 </template>
 
@@ -36,7 +34,7 @@ export default {
       type: String,
       required: false,
     },
-    // Should this open a new tab
+    // Open new tab or not
     newTab: {
       type: Boolean,
       default: false,
@@ -49,23 +47,21 @@ export default {
 
     // Colors
     isPrimary: { type: Boolean, default: false },
-    isPrimaryHollow: { type: Boolean, default: false },
+    isPrimaryOutline: { type: Boolean, default: false },
     isLight: { type: Boolean, default: false },
-    isLightHollow: { type: Boolean, default: false },
+    isLightOutline: { type: Boolean, default: false },
     isDark: { type: Boolean, default: false },
-    isDarkHollow: { type: Boolean, default: false },
+    isDarkOutline: { type: Boolean, default: false },
     isSuccess: { type: Boolean, default: false },
-    isSuccessHollow: { type: Boolean, default: false },
+    isSuccessOutline: { type: Boolean, default: false },
     isWarning: { type: Boolean, default: false },
-    isWarningHollow: { type: Boolean, default: false },
+    isWarningOutline: { type: Boolean, default: false },
     isDanger: { type: Boolean, default: false },
-    isDangerHollow: { type: Boolean, default: false },
+    isDangerOutline: { type: Boolean, default: false },
   },
   computed: {
-    type() {
+    buttonType() {
       if (this.to) {
-        // nuxt-link is used to provide navigations between page components and enhance performances with smart prefetching
-        // nuxt-link extend from router-link
         return "nuxt-link";
       }
       if (this.href) {
@@ -77,19 +73,19 @@ export default {
       const classList = [];
 
       if (this.isDisabled) {
-        classList.push("btn--disabled");
+        classList.push("button--disabled");
       }
 
       if (this.href) {
-        classList.push("btn--anchor");
+        classList.push("button--anchor");
       }
 
       if (this.isPrimary) {
-        classList.push("btn--primary");
+        classList.push("button--primary");
       }
 
-      if (this.isPrimaryHollow) {
-        classList.push("btn--primary btn--hollow");
+      if (this.isPrimaryOutline) {
+        classList.push("button--primary button--outline");
       }
 
       const noColorDefined =
@@ -98,60 +94,60 @@ export default {
         !this.isWarning &&
         !this.isDanger &&
         !this.isDark;
-      const noHollowDefined =
-        !this.isPrimaryHollow &&
-        !this.isSuccessHollow &&
-        !this.isWarningHollow &&
-        !this.isDangerHollow &&
-        !this.isLightHollow &&
-        !this.isDarkHollow;
+      const noOutlineDefined =
+        !this.isPrimaryOutline &&
+        !this.isSuccessOutline &&
+        !this.isWarningOutline &&
+        !this.isDangerOutline &&
+        !this.isLightOutline &&
+        !this.isDarkOutline;
       // by default will be light
-      if (noColorDefined && noHollowDefined) {
-        classList.push("btn--light");
+      if (noColorDefined && noOutlineDefined) {
+        classList.push("button--light");
       }
 
-      if (this.isLightHollow) {
-        classList.push("btn--light btn--hollow");
+      if (this.isLightOutline) {
+        classList.push("button--light button--outline");
       }
 
       if (this.isDark) {
-        classList.push("btn--dark");
+        classList.push("button--dark");
       }
 
-      if (this.isDarkHollow) {
-        classList.push("btn--dark btn--hollow");
+      if (this.isDarkOutline) {
+        classList.push("button--dark button--outline");
       }
 
       if (this.isSuccess) {
-        classList.push("btn--success");
+        classList.push("button--success");
       }
 
-      if (this.isSuccessHollow) {
-        classList.push("btn--success btn--hollow");
+      if (this.isSuccessOutline) {
+        classList.push("button--success button--outline");
       }
 
       if (this.isWarning) {
-        classList.push("btn--warning");
+        classList.push("button--warning");
       }
 
-      if (this.isWarningHollow) {
-        classList.push("btn--warning btn--hollow");
+      if (this.isWarningOutline) {
+        classList.push("button--warning button--outline");
       }
 
       if (this.isDanger) {
-        classList.push("btn--danger");
+        classList.push("button--danger");
       }
 
-      if (this.isDangerHollow) {
-        classList.push("btn--danger btn--hollow");
+      if (this.isDangerOutline) {
+        classList.push("button--danger button--outline");
       }
 
       if (this.isTall) {
-        classList.push("btn--tall");
+        classList.push("button--tall");
       }
 
       if (this.isShort) {
-        classList.push("btn--short");
+        classList.push("button--short");
       }
 
       return classList.join(" ");
@@ -161,7 +157,7 @@ export default {
 </script>
 
 <style lang="scss">
-.btn {
+.global-button {
   display: block;
   margin: 10px;
   font-size: 0.825rem;
@@ -184,21 +180,22 @@ export default {
     background-position: right center; /* change the direction of the change here */
   }
 
-  &.btn--disabled {
+  &.button--disabled {
     cursor: default;
     opacity: 0.5;
+
     &:hover {
       background-position: initial;
     }
   }
 
-  &.btn--anchor {
+  &.button--anchor {
     display: inline-block;
     font-size: 0.875rem;
   }
 
   /* Colors */
-  &.btn--primary {
+  &.button--primary {
     background-image: linear-gradient(
       to right,
       $primary1 0%,
@@ -207,7 +204,7 @@ export default {
     );
     color: $white;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $primary1;
       color: $primary1;
@@ -219,7 +216,7 @@ export default {
     }
   }
 
-  &.btn--warning {
+  &.button--warning {
     background-image: linear-gradient(
       to right,
       $warning1 0%,
@@ -229,7 +226,7 @@ export default {
 
     color: $white;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $warning3;
       color: $warning1;
@@ -241,7 +238,7 @@ export default {
     }
   }
 
-  &.btn--success {
+  &.button--success {
     background-image: linear-gradient(
       to right,
       $success1 0%,
@@ -250,7 +247,7 @@ export default {
     );
     color: $white;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $success1;
       color: $success1;
@@ -262,7 +259,7 @@ export default {
     }
   }
 
-  &.btn--danger {
+  &.button--danger {
     background-image: linear-gradient(
       to right,
       $danger1 0%,
@@ -271,7 +268,7 @@ export default {
     );
     color: $white;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $danger1;
       color: $danger1;
@@ -283,7 +280,7 @@ export default {
     }
   }
 
-  &.btn--light {
+  &.button--light {
     background-image: linear-gradient(
       to right,
       $lightGrey2 0%,
@@ -293,7 +290,7 @@ export default {
 
     color: $darkGrey1;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $lightGrey2;
       color: $darkGrey1;
@@ -305,7 +302,7 @@ export default {
     }
   }
 
-  &.btn--dark {
+  &.button--dark {
     background-image: linear-gradient(
       to right,
       $darkGrey2 0%,
@@ -315,7 +312,7 @@ export default {
 
     color: $white;
 
-    &.btn--hollow {
+    &.button--outline {
       background: transparent;
       border: 1px solid $darkGrey2;
       color: $darkGrey2;
@@ -328,13 +325,13 @@ export default {
   }
 
   /* Types */
-  &.btn--tall {
+  &.button--tall {
     padding-top: 20px;
     padding-bottom: 20px;
     font-size: 0.825rem;
   }
 
-  &.btn--short {
+  &.button--short {
     padding: 12px 18px;
   }
 }

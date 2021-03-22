@@ -1,6 +1,6 @@
 {
   "name": "global-ui",
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Vue.js UI Components Library - Made for NuxtJS & VueJS Developers.",
   "keywords": [
     "global ui",
@@ -14,10 +14,6 @@
     "bootstrap"
   ],
   "homepage": "https://global-ui-docs.netlify.app/",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Frederick-88/global-css-framework"
-  },
   "main": "src",
   "contributors": [
     {

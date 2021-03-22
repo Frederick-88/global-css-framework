@@ -1,8 +1,8 @@
 <template>
-  <label class="checkbox">
+  <label class="global-checkbox">
     <input type="checkbox" :checked="isChecked" @change="$emit('change')" />
     <span class="checkmark" :class="[propClass]"></span>
-    <template v-if="label">{{ label }}</template>
+    <span v-if="label">{{ label }}</span>
   </label>
 </template>
 
@@ -43,12 +43,12 @@ export default {
 </script>
 
 <style lang="scss">
-.checkbox {
-  position: relative;
+.global-checkbox {
   cursor: pointer;
+  position: relative;
   user-select: none;
   display: block;
-  padding-left: 1.5em; // for label props
+  padding-left: 1.5rem; // for label props
 
   &:hover {
     .checkmark {
@@ -75,9 +75,9 @@ export default {
   }
 
   input {
+    cursor: pointer;
     position: absolute;
     opacity: 0;
-    cursor: pointer;
     height: 0;
     width: 0;
 

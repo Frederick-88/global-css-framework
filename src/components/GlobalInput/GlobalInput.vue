@@ -1,8 +1,6 @@
 <template>
-  <div class="global-input__wrapper" :class="[{ 'has-label': label !== '' }]">
-    <template v-if="label">
-      <label>{{ label }}</label>
-    </template>
+  <div class="global-input__wrapper" :class="{ 'has-label': label !== '' }">
+    <label v-if="label">{{ label }}</label>
     <input
       :class="inputClassList"
       :type="type"
@@ -18,20 +16,20 @@
       @keypress.enter="$event.target.blur"
     />
 
-    <template v-if="(message && isSuccess) || isWarning || isError">
+    <section v-if="(message && isSuccess) || isWarning || isError">
       <div :class="messageClassList">
-        <template v-if="isSuccess">
+        <div v-if="isSuccess">
           <i class="icon icon-tick-circle"></i>
-        </template>
-        <template v-else-if="isWarning">
+        </div>
+        <div v-else-if="isWarning">
           <i class="icon icon-notice"></i>
-        </template>
-        <template v-else-if="isError">
+        </div>
+        <div v-else-if="isError">
           <i class="icon icon-close-solid"></i>
-        </template>
+        </div>
         <span v-html="message"></span>
       </div>
-    </template>
+    </section>
   </div>
 </template>
 
@@ -80,13 +78,11 @@ export default {
 
   methods: {
     onInputEvent(event) {
-      const { value } = event.target;
-      this.$emit("input", value);
+      this.$emit("input", event.target.value);
     },
 
     onChangeEvent(event) {
-      const { value } = event.target;
-      this.$emit("change", value);
+      this.$emit("change", event.target.value);
     },
   },
 };
@@ -114,7 +110,6 @@ export default {
     padding: 10px 15px;
     border-radius: 4px;
     border: 1px solid $disabledGrey;
-    font-family: "Work Sans", "Arial", "Helvetica", "sans-serif";
     font-weight: 500;
     font-size: 0.875rem;
     color: $black;

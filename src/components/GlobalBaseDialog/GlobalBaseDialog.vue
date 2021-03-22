@@ -1,15 +1,15 @@
 <template>
   <div
-    class="dialog-modal"
+    class="global-dialog-modal"
     :class="[
       { 'is-show': isShow, 'multiline-buttons': multilineButtons },
       dialogClass,
     ]"
   >
-    <div class="dialog-modal__overlay" @click="closeModal"></div>
-    <div class="dialog-modal__content" :style="styleObject">
+    <div class="global-dialog-modal__overlay" @click="$emit('close')"></div>
+    <div class="global-dialog-modal__content" :style="styleObject">
       <i
-        class="icon dialog-modal__icon"
+        class="icon global-dialog-modal__icon"
         :class="{
           'icon-info-line': isPrimary,
           'icon-checkmark-outline': isSuccess,
@@ -19,38 +19,30 @@
         }"
       ></i>
 
-      <h4 class="dialog-modal__title" v-if="title">
+      <h4 class="global-dialog-modal__title" v-if="title">
         {{ title }}
       </h4>
-      <p class="dialog-modal__text" v-if="text" v-html="text"></p>
+      <p class="global-dialog-modal__text" v-if="text">{{ text }}</p>
 
-      <!--
-        @slot Modal content
-        @binding item an item passed to the content
-      -->
       <slot></slot>
 
-      <div
-        v-if="!noButton"
-        class="dialog-modal__buttons"
-        :class="{ 'is-full-width': isFullWidthButtons }"
-      >
+      <div v-if="!noButton" class="global-dialog-modal__buttons">
         <GlobalButton
           :is-danger="isDanger"
           :is-warning="isWarning"
           :is-success="isSuccess"
           :is-tall="true"
           :is-primary="!isDanger && !isWarning && !isSuccess"
-          @click="confirm"
+          @click="$emit('confirm')"
         >
           {{ button1Text }}
         </GlobalButton>
 
         <GlobalButton
-          v-if="!noCancel"
-          :is-hollow="true"
+          v-if="!showOneButton"
+          :is-outline="true"
           :is-tall="true"
-          @click="closeModal"
+          @click="$emit('close')"
         >
           {{ button2Text }}
         </GlobalButton>
@@ -63,13 +55,6 @@
 export default {
   name: "GlobalBaseDialog",
   props: {
-    /**
-     * Text alignment of the dialog
-     */
-    align: {
-      type: String,
-      default: "center",
-    },
     title: {
       type: String,
       default: "",
@@ -112,13 +97,9 @@ export default {
       default: false,
     },
     /**
-     * So Buttons can be Full Width / have bigger width
-     */
-    isFullWidthButtons: { type: Boolean, default: false },
-    /**
      * There will be no cancel button when set to true
      */
-    noCancel: {
+    showOneButton: {
       type: Boolean,
       default: false,
     },
@@ -130,14 +111,14 @@ export default {
       default: false,
     },
     /**
-     * Change button 1 name
+     * Change 1st button name
      */
     button1Text: {
       type: String,
       default: "Confirm",
     },
     /**
-     * Change button 2 name
+     * Change 2nd button name
      */
     button2Text: {
       type: String,
@@ -160,8 +141,6 @@ export default {
     styleObject() {
       const styleObject = {};
 
-      styleObject.textAlign = this.align;
-
       if (this.width) {
         styleObject.width = this.width + "px";
       }
@@ -171,43 +150,19 @@ export default {
     dialogClass() {
       const classList = [];
 
-      if (this.isPrimary) classList.push("dialog-modal--primary");
-      if (this.isSuccess) classList.push("dialog-modal--success");
-      if (this.isDanger) classList.push("dialog-modal--danger");
-      if (this.isWarning) classList.push("dialog-modal--warning");
+      if (this.isPrimary) classList.push("global-dialog-modal--primary");
+      if (this.isSuccess) classList.push("global-dialog-modal--success");
+      if (this.isDanger) classList.push("global-dialog-modal--danger");
+      if (this.isWarning) classList.push("global-dialog-modal--warning");
 
       return classList;
-    },
-  },
-  methods: {
-    closeModal() {
-      /**
-       * Old close event. use @close instead
-       *
-       * @event closeOverlay
-       */
-      this.$emit("closeOverlay");
-      /**
-       * When user click the overlay, close button or 2nd button
-       *
-       * @event close
-       */
-      this.$emit("close");
-    },
-    confirm() {
-      /**
-       * Confirm event.
-       *
-       * @event confirm
-       */
-      this.$emit("confirm");
     },
   },
 };
 </script>
 
 <style lang="scss">
-.dialog-modal {
+.global-dialog-modal {
   color: $darkGrey4;
   display: none;
   padding: 20px;
@@ -226,7 +181,7 @@ export default {
   }
 
   &.multiline-buttons {
-    .dialog-modal__buttons {
+    .global-dialog-modal__buttons {
       flex-direction: column;
       .btn {
         margin: 5px;
@@ -235,7 +190,7 @@ export default {
   }
 }
 
-.dialog-modal__icon {
+.global-dialog-modal__icon {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -274,7 +229,7 @@ export default {
   }
 }
 
-.dialog-modal__overlay {
+.global-dialog-modal__overlay {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -282,7 +237,7 @@ export default {
   cursor: pointer;
 }
 
-.dialog-modal__content {
+.global-dialog-modal__content {
   position: relative;
   z-index: 2;
   width: 100%;
@@ -295,51 +250,47 @@ export default {
     0px 0px 1px rgba(10, 31, 68, 0.1);
   line-height: 1.4;
 
-  .dialog-modal--primary &,
-  .dialog-modal--success &,
-  .dialog-modal--danger &,
-  .dialog-modal--warning & {
+  .global-dialog-modal--primary &,
+  .global-dialog-modal--success &,
+  .global-dialog-modal--danger &,
+  .global-dialog-modal--warning & {
     border-top: 6px solid transparent;
   }
 
-  .dialog-modal--primary & {
+  .global-dialog-modal--primary & {
     border-top-color: $primary1;
   }
 
-  .dialog-modal--success & {
+  .global-dialog-modal--success & {
     border-top-color: $success1;
   }
 
-  .dialog-modal--danger & {
+  .global-dialog-modal--danger & {
     border-top-color: $danger1;
   }
 
-  .dialog-modal--warning & {
+  .global-dialog-modal--warning & {
     border-top-color: $warning3;
   }
 }
 
-.dialog-modal__title {
+.global-dialog-modal__title {
   font-weight: bold;
   margin-top: 0;
 }
 
-.dialog-modal__text {
+.global-dialog-modal__text {
   margin-top: 0;
 }
 
-.dialog-modal__buttons {
+.global-dialog-modal__buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 280px;
   margin: 20px auto 0;
 
-  &.is-full-width {
-    width: 100%;
-  }
-
-  .btn {
+  .global-button {
     margin: 0 10px;
     width: 100%;
   }
