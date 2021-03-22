@@ -6,12 +6,17 @@
       v-if="title"
       @click="toggleActive"
     >
-      <span v-html="title"></span>
-      <i v-if="icon" :class="iconClass"></i>
+      <span v-html="title" />
+      <i v-if="icon" :class="iconClass" />
     </button>
 
-    <div v-if="text" ref="text" class="accordion__content" :style="heightStyle">
-      <div class="accordion__text" v-html="text"></div>
+    <div
+      v-if="text"
+      ref="text"
+      class="accordion__content"
+      :style="accordionContentStyle"
+    >
+      <span class="accordion__text">{{ text }}</span>
     </div>
   </div>
 </template>
@@ -49,17 +54,21 @@ export default {
   },
   computed: {
     iconClass() {
-      const cssClass = ["icon"];
+      const iconClass = ["icon"];
 
-      if (this.icon === "caret") cssClass.push("icon-caret-down");
+      if (this.icon === "caret") iconClass.push("icon-caret-down");
+
       if (this.icon === "plus") {
-        if (this.isActive) cssClass.push("icon-minus");
-        else cssClass.push("icon-plus");
+        if (this.isActive) {
+          iconClass.push("icon-minus");
+        } else {
+          iconClass.push("icon-plus");
+        }
       }
 
-      return cssClass;
+      return iconClass;
     },
-    heightStyle() {
+    accordionContentStyle() {
       const styleObject = {};
 
       if (this.isActive) {
@@ -120,7 +129,6 @@ export default {
   display: block;
   width: 100%;
   text-align: left;
-  font-size: 1em;
   padding: 15px 10px;
 }
 
@@ -131,6 +139,7 @@ export default {
   border-radius: 4px;
   border: 0;
   outline: 0;
+  font-size: 0.875rem;
   cursor: pointer;
 
   .icon {
@@ -144,6 +153,7 @@ export default {
 
 .accordion__content {
   transition: height 0.35s ease-in-out;
+  font-size: 0.825rem;
   overflow: hidden;
 }
 </style>
