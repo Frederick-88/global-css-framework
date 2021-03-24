@@ -42,11 +42,10 @@ $ yarn add global-ui
 - GlobalDropdown :heavy_check_mark:
 - GlobalAnimationLoader :heavy_check_mark:
 - GlobalBaseDialog :heavy_check_mark:
-- GlobalCanvasModal :heavy_check_mark:
 
 ### Components On-Development :
 
-- Currently there are no further development plans :no_entry:
+- GlobalCanvasModal :no_entry:
 
 ## Usage
 
@@ -107,7 +106,7 @@ Coming Soon :eyes:
 
 ## Documentation
 
-Currently still in development. :muscle: :v:
+https://global-ui-docs.netlify.app/ :bulb:
 
 ## Contributing
 
@@ -124,6 +123,7 @@ Currently still in development. :muscle: :v:
 
 - https://offeo.com/
 - https://gradientbuttons.colorion.co/
+- https://storybook.js.org/
 
 ### ----------------------------------
 

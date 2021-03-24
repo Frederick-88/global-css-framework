@@ -1,14 +1,14 @@
 <template>
-  <label class="switch" :class="{ 'is-disabled': isDisabled }">
-    <span v-if="label" class="switch__label">
+  <label class="global-switch" :class="{ 'is-disabled': isDisabled }">
+    <span v-if="label" class="global-switch__label">
       {{ label }}
     </span>
     <input
-      class="switch__input"
+      class="global-switch__input"
       type="checkbox"
       :checked="isChecked"
       :disabled="isDisabled"
-      @change="change"
+      @change="$emit('change')"
     />
     <span class="slider round"></span>
   </label>
@@ -18,25 +18,17 @@
 export default {
   name: "GlobalSwitch",
   props: {
-    label: { type: String, default: "" },
-    /**
-     * You can have both labels
-     */
     isChecked: { type: Boolean, default: false },
+    label: { type: String, default: "" },
     isDisabled: { type: Boolean, default: false },
-  },
-  methods: {
-    change() {
-      this.$emit("change");
-    },
   },
 };
 </script>
 
 <style lang="scss">
-.switch {
-  position: relative;
+.global-switch {
   cursor: pointer;
+  position: relative;
 
   &.is-disabled {
     opacity: 0.5;
@@ -47,6 +39,7 @@ export default {
     width: 0;
     height: 0;
 
+    // when input checked it will select .slider class since .slider isn't the child.
     &:checked + .slider {
       background-color: $success3;
 
@@ -61,8 +54,8 @@ export default {
   }
 
   .slider {
-    margin: 0;
     cursor: pointer;
+    margin: 0;
     width: 40px;
     height: 22px;
     background-color: $lightGrey4;
@@ -93,14 +86,14 @@ export default {
   }
 }
 
-.switch__label {
-  padding-right: 50px;
+.global-switch__label {
   cursor: pointer;
+  padding-right: 50px;
   font-size: 0.875rem;
   margin-right: 5px;
 }
 
-.switch__label ~ .slider {
+.global-switch__label ~ .slider {
   position: absolute;
   right: 5px;
 }

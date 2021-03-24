@@ -50,20 +50,3 @@ withInitialValue.parameters = {
     },
   },
 };
-
-export const AutoCompleteDropdown = Template.bind({});
-AutoCompleteDropdown.args = {
-  value: "blue",
-  autoComplete: true,
-  autoCompletePlaceholder: "Search Here",
-  maxWidth: "600px",
-};
-
-AutoCompleteDropdown.parameters = {
-  docs: {
-    description: {
-      story:
-        "If you use 'AutoComplete' props, make sure to provide 'AutoCompletePlaceholder' props.",
-    },
-  },
-};

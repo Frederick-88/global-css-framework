@@ -61,34 +61,34 @@ Dark.args = {
   isDark: true,
 };
 
-export const PrimaryHollow = Template.bind({});
-PrimaryHollow.args = {
-  isPrimaryHollow: true,
+export const PrimaryOutline = Template.bind({});
+PrimaryOutline.args = {
+  isPrimaryOutline: true,
 };
 
-export const SuccessHollow = Template.bind({});
-SuccessHollow.args = {
-  isSuccessHollow: true,
+export const SuccessOutline = Template.bind({});
+SuccessOutline.args = {
+  isSuccessOutline: true,
 };
 
-export const WarningHollow = Template.bind({});
-WarningHollow.args = {
-  isWarningHollow: true,
+export const WarningOutline = Template.bind({});
+WarningOutline.args = {
+  isWarningOutline: true,
 };
 
-export const DangerHollow = Template.bind({});
-DangerHollow.args = {
-  isDangerHollow: true,
+export const DangerOutline = Template.bind({});
+DangerOutline.args = {
+  isDangerOutline: true,
 };
 
-export const LightHollow = Template.bind({});
-LightHollow.args = {
-  isLightHollow: true,
+export const LightOutline = Template.bind({});
+LightOutline.args = {
+  isLightOutline: true,
 };
 
-export const DarkHollow = Template.bind({});
-DarkHollow.args = {
-  isDarkHollow: true,
+export const DarkOutline = Template.bind({});
+DarkOutline.args = {
+  isDarkOutline: true,
 };
 
 export const TallButton = Template.bind({});

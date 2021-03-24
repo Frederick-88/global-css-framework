@@ -7,28 +7,28 @@
     <i class="icon icon-close" style="color: black"></i>
     <div class="home-button__wrapper">
       <GlobalButton :is-primary="true">Global-Primary-Button</GlobalButton>
-      <GlobalButton :is-primary-hollow="true"
-        >Global-Primary-Hollow-Button</GlobalButton
+      <GlobalButton :is-primary-outline="true"
+        >Global-Primary-Outline-Button</GlobalButton
       >
       <GlobalButton :is-success="true">Global-success-Button</GlobalButton>
-      <GlobalButton :is-success-hollow="true"
-        >Global-success-Hollow-Button</GlobalButton
+      <GlobalButton :is-success-outline="true"
+        >Global-success-Outline-Button</GlobalButton
       >
       <GlobalButton :is-warning="true">Global-warning-Button</GlobalButton>
-      <GlobalButton :is-warning-hollow="true"
-        >Global-warning-Hollow-Button</GlobalButton
+      <GlobalButton :is-warning-outline="true"
+        >Global-warning-Outline-Button</GlobalButton
       >
       <GlobalButton :is-danger="true">Global-danger-Button</GlobalButton>
-      <GlobalButton :is-danger-hollow="true"
-        >Global-danger-Hollow-Button</GlobalButton
+      <GlobalButton :is-danger-outline="true"
+        >Global-danger-Outline-Button</GlobalButton
       >
       <GlobalButton :is-light="true">Global-light-Button</GlobalButton>
-      <GlobalButton :is-light-hollow="true"
-        >Global-light-Hollow-Button</GlobalButton
+      <GlobalButton :is-light-outline="true"
+        >Global-light-Outline-Button</GlobalButton
       >
       <GlobalButton :is-dark="true">Global-dark-Button</GlobalButton>
-      <GlobalButton :is-dark-hollow="true"
-        >Global-dark-Hollow-Button</GlobalButton
+      <GlobalButton :is-dark-outline="true"
+        >Global-dark-Outline-Button</GlobalButton
       >
       <GlobalButton :is-primary="true" :is-tall="true"
         >Global-Primary-Tall-Button</GlobalButton
@@ -141,7 +141,7 @@
         text="This is a dialog description"
         button1Text="yes"
         button2Text="no"
-        @closeOverlay="isShowDefaultDialog = false"
+        @close="isShowDefaultDialog = false"
       >
         <p>This is a slot</p>
       </GlobalBaseDialog>
@@ -156,7 +156,7 @@
         text="This is a dialog description"
         button1Text="yes"
         button2Text="no"
-        @closeOverlay="isShowPrimaryDialog = false"
+        @close="isShowPrimaryDialog = false"
       >
         <p>This is a slot</p>
       </GlobalBaseDialog>
@@ -165,13 +165,12 @@
         >Open default dialog</GlobalButton
       >
       <GlobalBaseDialog
-        :isFullWidthButtons="true"
         :is-warning="true"
         :width="400"
         :is-show="isShowWarningDialog"
         title="Default dialog title"
         text="This is a dialog description"
-        @closeOverlay="isShowWarningDialog = false"
+        @close="isShowWarningDialog = false"
       >
         <p>This is a slot</p>
       </GlobalBaseDialog>
@@ -185,7 +184,7 @@
         :is-show="isShowDangerDialog"
         title="Default dialog title"
         text="This is a dialog description"
-        @closeOverlay="isShowDangerDialog = false"
+        @close="isShowDangerDialog = false"
       >
         <p>This is a slot</p>
       </GlobalBaseDialog>
@@ -198,13 +197,13 @@
         :is-show="isShowSuccessDialog"
         title="Default dialog title"
         text="This is a dialog description"
-        @closeOverlay="isShowSuccessDialog = false"
+        @close="isShowSuccessDialog = false"
       >
         <p>This is a slot</p>
       </GlobalBaseDialog>
     </div>
     <!------------------------------- -->
-    <h3>Global Canvas Modal</h3>
+    <!-- <h3>Global Canvas Modal</h3>
     <div class="home__wrapper--no-flex">
       <GlobalButton @click="isShowDefaultCanvasModal = true"
         >Open default canvas modal</GlobalButton
@@ -271,7 +270,7 @@
         <h3 style="margin-top: 0">Welcome!</h3>
         <p>This is the slot part of canvas modal</p>
       </GlobalCanvasModal>
-    </div>
+    </div> -->
   </div>
 </template>
 

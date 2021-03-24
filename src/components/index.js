@@ -1,4 +1,4 @@
-// register any new UI here
+// register any new component here
 
 import GlobalButton from "./GlobalButton/GlobalButton.vue";
 import GlobalInput from "./GlobalInput/GlobalInput.vue";
@@ -8,7 +8,6 @@ import GlobalAccordion from "./GlobalAccordion/GlobalAccordion.vue";
 import GlobalDropdown from "./GlobalDropdown/GlobalDropdown.vue";
 import GlobalAnimationLoader from "./GlobalAnimationLoader/GlobalAnimationLoader.vue";
 import GlobalBaseDialog from "./GlobalBaseDialog/GlobalBaseDialog.vue";
-import GlobalCanvasModal from "./GlobalCanvasModal/GlobalCanvasModal.vue";
 
 export {
   GlobalButton,
@@ -19,5 +18,4 @@ export {
   GlobalDropdown,
   GlobalAnimationLoader,
   GlobalBaseDialog,
-  GlobalCanvasModal,
 };

@@ -1,31 +1,30 @@
 <template>
   <div
-    class="dropdown"
+    class="global-dropdown"
     :class="{ 'is-active': isActive }"
     v-click-outside="closeDropdown"
     :style="dropdownStyle"
   >
-    <button type="button" class="dropdown__selected" @click="toggleDropdown">
+    <button
+      type="button"
+      class="global-dropdown__selected"
+      @click="isActive = !isActive"
+    >
       <span class="name">{{ selectedOptionName }}</span>
       <i class="icon icon-caret-down"></i>
     </button>
-    <div class="dropdown__content" :style="dropdownContentStyle">
-      <GlobalInput
-        v-if="autoComplete"
-        class="dropdown__auto"
-        :placeholder="autoCompletePlaceholder"
-        ref="input"
-        v-model="autoCompleteValue"
-      ></GlobalInput>
-      <ul class="dropdown__list" refs="dropdownOptions">
+
+    <div class="global-dropdown__content" :style="dropdownContentStyle">
+      <ul class="global-dropdown__list">
         <li
-          v-for="option in filteredOptions"
+          v-for="option in options"
           :key="option.value"
-          class="dropdown__item"
-          :class="{ 'is-selected': option.value === tempValue }"
-          v-html="option.name"
+          class="global-dropdown__item"
+          :class="{ 'is-selected': option.value === selectedValue }"
           @click="setValue(option.value)"
-        ></li>
+        >
+          {{ option.name }}
+        </li>
       </ul>
     </div>
   </div>
@@ -36,9 +35,8 @@ export default {
   name: "GlobalDropdown",
   data() {
     return {
-      tempValue: "",
       isActive: false,
-      autoCompleteValue: "",
+      selectedValue: "",
     };
   },
   props: {
@@ -79,25 +77,11 @@ export default {
       type: [String, Number],
       default: "300px",
     },
-    /**
-     * Will display search bar in your dropdown to search the option you want
-     */
-    autoComplete: {
-      type: Boolean,
-      default: false,
-    },
-    /**
-     * if 'autoComplete' props is true, need to use this as your placeholder
-     */
-    autoCompletePlaceholder: {
-      type: String,
-      default: "Search",
-    },
   },
   computed: {
     selectedOptionName() {
       const selectedOption = this.options.find(
-        (opt) => opt.value === this.tempValue
+        (option) => option.value === this.selectedValue
       );
       if (selectedOption && selectedOption.name) return selectedOption.name;
       return this.placeholder;
@@ -105,6 +89,7 @@ export default {
     dropdownStyle() {
       const styleObject = {};
 
+      // check if user send "100px" or just 100
       styleObject.maxWidth =
         typeof this.maxWidth === "string"
           ? this.maxWidth
@@ -115,6 +100,7 @@ export default {
     dropdownContentStyle() {
       const styleObject = {};
 
+      // check if user send "100px" or just 100
       styleObject.maxHeight =
         typeof this.maxHeight === "string"
           ? this.maxHeight
@@ -122,57 +108,13 @@ export default {
 
       return styleObject;
     },
-    filteredOptions() {
-      if (!this.autoComplete || !this.autoCompleteValue) {
-        return this.options;
-      }
-
-      const acronymFonts = [];
-      const startingKeywordFonts = [];
-      const normalSearchFonts = [];
-
-      this.options.forEach((font) => {
-        const hasAcronymKeyword =
-          font.name
-            .match(/\b(\w)/g)
-            .join("")
-            .toLowerCase()
-            .indexOf(this.autoCompleteValue.toLowerCase()) > -1;
-        const hasStartingKeyword =
-          this.autoCompleteValue.toLowerCase() ===
-          font.name.slice(0, this.autoCompleteValue.length).toLowerCase();
-        const hasSearchKeyword =
-          font.name
-            .toLowerCase()
-            .indexOf(this.autoCompleteValue.toLowerCase()) > -1;
-
-        if (hasAcronymKeyword) {
-          acronymFonts.push(font);
-        }
-        if (hasStartingKeyword) {
-          startingKeywordFonts.push(font);
-        }
-        if (hasSearchKeyword) {
-          normalSearchFonts.push(font);
-        }
-      });
-
-      // new Set will remove any duplicates
-      return Array.from(
-        new Set([
-          ...startingKeywordFonts,
-          ...normalSearchFonts,
-          ...acronymFonts,
-        ])
-      );
-    },
   },
   beforeMount() {
     // if there is no placeholder,
     // use value or first option in the list given
     if (!this.placeholder) {
-      if (this.value) this.tempValue = this.value;
-      else this.tempValue = this.options[0].value;
+      if (this.value) this.selectedValue = this.value;
+      else this.selectedValue = this.options[0].value;
     }
   },
   methods: {
@@ -181,46 +123,33 @@ export default {
     },
     setValue(value) {
       // if nothing is passed, use the first option in given options
-      const setValue = value || this.options[0].value;
-      if (!setValue) {
+      const isValueExist = value || this.options[0].value;
+      if (!isValueExist) {
         console.error("Missing value");
         return;
       }
-      this.tempValue = setValue;
-      this.$emit("change", setValue);
+
+      this.selectedValue = isValueExist;
+      this.$emit("change", isValueExist);
       this.closeDropdown();
-    },
-    toggleDropdown() {
-      this.isActive = !this.isActive;
-      if (this.isActive && this.autoComplete) {
-        // clear auto complete
-        this.autoCompleteValue = "";
-        // need to use set timeout to ensure input is focusable
-        // doesn't work with nextTick
-        setTimeout(() => {
-          if (this.$refs.input.$el.getElementsByTagName("input")) {
-            this.$refs.input.$el.getElementsByTagName("input")[0].focus();
-          }
-        }, 100);
-      }
     },
   },
   watch: {
     value(val) {
-      this.tempValue = val;
+      this.selectedValue = val;
     },
   },
 };
 </script>
 
 <style lang="scss">
-.dropdown {
+.global-dropdown {
   position: relative;
   font-size: 0.875rem;
   color: $grey;
 }
 
-.dropdown__selected {
+.global-dropdown__selected {
   width: 100%;
   background: $white;
   border-radius: 4px;
@@ -233,11 +162,11 @@ export default {
   outline: 0;
 
   &:focus,
-  .dropdown.is-active & {
+  .global-dropdown.is-active & {
     border-color: $primary1;
   }
 
-  .dropdown.is-active & {
+  .global-dropdown.is-active & {
     .icon {
       transform: rotate(180deg);
     }
@@ -250,7 +179,7 @@ export default {
   }
 }
 
-.dropdown__content {
+.global-dropdown__content {
   position: absolute;
   overflow: hidden;
   width: 100%;
@@ -267,44 +196,14 @@ export default {
   display: flex;
   flex-direction: column;
 
-  .dropdown.is-active & {
+  .global-dropdown.is-active & {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
   }
-
-  * {
-    &::-webkit-scrollbar {
-      width: 7px;
-      height: 7px;
-    }
-
-    &::-webkit-scrollbar-track {
-      background: rgba(230, 230, 230, 0.5);
-    }
-
-    &::-webkit-scrollbar-thumb {
-      background: $lightGrey6;
-      transition: background 0.25s ease-in-out;
-      border-radius: 4px;
-    }
-
-    &::-webkit-scrollbar-thumb:hover {
-      background: darken($lightGrey6, 5%);
-    }
-  }
 }
 
-.dropdown__auto {
-  padding: 5px;
-
-  .global-input {
-    box-sizing: border-box;
-    margin: 5px 0 0;
-  }
-}
-
-.dropdown__list {
+.global-dropdown__list {
   margin: 0;
   padding: 0;
   list-style: none;
@@ -313,7 +212,8 @@ export default {
   overflow-x: hidden;
 }
 
-.dropdown__item {
+.global-dropdown__item {
+  cursor: pointer;
   margin: 0;
   background: transparent;
   width: 100%;
@@ -321,7 +221,6 @@ export default {
   text-align: left;
   border: 0;
   border-bottom: 1px solid $disabledGrey;
-  cursor: pointer;
 
   &:last-child {
     border-bottom: 0;

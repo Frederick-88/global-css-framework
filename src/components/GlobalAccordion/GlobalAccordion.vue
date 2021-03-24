@@ -1,5 +1,5 @@
 <template>
-  <div class="accordion" :class="[propClass]">
+  <div class="global-accordion" :class="[propClass]">
     <GlobalAccordionItem
       v-for="(item, index) in accordionItems"
       :key="item.title"
@@ -127,7 +127,7 @@ export default {
 </script>
 
 <style lang="scss">
-.accordion {
+.global-accordion {
   .accordion__title {
     background: $lightGrey1; // light as default
     color: $darkGrey1;
