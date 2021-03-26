@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?qf56ez');
-  src:  url('fonts/icomoon.eot?qf56ez#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?qf56ez') format('truetype'),
-    url('fonts/icomoon.woff?qf56ez') format('woff'),
-    url('fonts/icomoon.svg?qf56ez#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?vomto4');
+  src:  url('fonts/icomoon.eot?vomto4#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?vomto4') format('truetype'),
+    url('fonts/icomoon.woff?vomto4') format('woff'),
+    url('fonts/icomoon.svg?vomto4#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -64,18 +64,6 @@
 .icon-tick-circle:before {
   content: "\e97c";
 }
-.icon-folder-active:before {
-  content: "\e92f";
-}
-.icon-folder:before {
-  content: "\e930";
-}
-.icon-favorited:before {
-  content: "\e99b";
-}
-.icon-favorite:before {
-  content: "\e99c";
-}
 .icon-arrow-left:before {
   content: "\e990";
 }
@@ -88,50 +76,8 @@
 .icon-arrow-down:before {
   content: "\e993";
 }
-.icon-lock:before {
-  content: "\e951";
-}
-.icon-unlock:before {
-  content: "\e951";
-}
 .icon-notice:before {
   content: "\e931";
-}
-.icon-envelope:before {
-  content: "\e969";
-}
-.icon-email:before {
-  content: "\e969";
-}
-.icon-google:before {
-  content: "\e959";
-}
-.icon-share:before {
-  content: "\e957";
-}
-.icon-social:before {
-  content: "\e957";
-}
-.icon-instagram:before {
-  content: "\e934";
-}
-.icon-brand:before {
-  content: "\e934";
-}
-.icon-social2:before {
-  content: "\e934";
-}
-.icon-pinterest:before {
-  content: "\e96a";
-}
-.icon-whatsapp:before {
-  content: "\e9ab";
-}
-.icon-facebook-messenger:before {
-  content: "\e9ac";
-}
-.icon-lightbulb:before {
-  content: "\e97f";
 }
 .icon-plus-thin:before {
   content: "\e96e";
@@ -147,12 +93,6 @@
 }
 .icon-close:before {
   content: "\e92d";
-}
-.icon-move-layer:before {
-  content: "\e938";
-}
-.icon-search:before {
-  content: "\e93a";
 }
 .icon-timeline-add-seconds:before {
   content: "\e945";
@@ -196,9 +136,6 @@
 .icon-checkmark-outline:before {
   content: "\e900";
 }
-.icon-thumbs-up:before {
-  content: "\e9ba";
-}
 .icon-subtract:before {
   content: "\e989";
 }
@@ -219,9 +156,6 @@
 }
 .icon-create:before {
   content: "\e96c";
-}
-.icon-connection:before {
-  content: "\e91b";
 }
 .icon-warning:before {
   content: "\ea07";
