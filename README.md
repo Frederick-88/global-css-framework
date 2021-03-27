@@ -80,7 +80,11 @@ new Vue({
 
 2. Import Global UI's SCSS Variables
 
-- install 3 things required for Global UI's SCSS variables :arrow_right: "npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1" .
+- install 3 things required for Global UI's SCSS variables :arrow_down:
+
+```
+npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1"
+```
 
 - Create "vue.config.js" in root folder and fill it with :
 
@@ -168,7 +172,12 @@ plugins: [{ src: "~/plugins/globalui.js" }],
 
 2. Import Global UI's SCSS Variables
 
-- install 3 things required for Global UI's SCSS variables :arrow_right: "npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1" .
+- install 3 things required for Global UI's SCSS variables :arrow_down:
+
+```
+npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1"
+```
+
 - add this in your "nuxt.config.js"
 
 ```
@@ -196,13 +205,12 @@ $icomoon-font-path: "~@/node_modules/global-ui/src/assets/icomoon/fonts"; // to 
 
 ```
 
-    css: ["~/node_modules/global-ui/src/assets/icomoon/style.scss"],
-      styleResources: {
-
-scss: [
-"./assets/variables.scss"
-]
-},
+  css: ["~/node_modules/global-ui/src/assets/icomoon/style.scss"],
+    styleResources: {
+      scss: [
+      "./assets/variables.scss"
+      ]
+    },
 
 ```
 
