@@ -50,21 +50,25 @@ $ yarn add global-ui
 
 Several options are available:
 
-## Vue
+## Vue 2
+
+can see example repo here :arrow_right: https://github.com/Frederick-88/vue-global-ui-tester
 
 The Setups are:
 
 1. Register/Import Global Components
 
-Option A : Define Globally in `src/main.js` & Use Anywhere without need to import again!
+- in folder "src/main.js", inside can import components like this
 
 ```
 import Vue from "vue";
 import App from "./App.vue";
+
+import vClickOutside from "v-click-outside";
 import GlobalUIs from "global-ui";
 
-// You can change "GlobalUIs" naming to anything that you want
-Vue.use(GlobalUIs);
+Vue.use(vClickOutside);
+Vue.use(GlobalUIs); // with this code, its already importing all global components =)
 
 new Vue({
   render: function(h) {
@@ -74,37 +78,73 @@ new Vue({
 
 ```
 
-Option B : Import UI Components in your `.vue` component
+2. Import Global UI's SCSS Variables
+
+- install 3 things required for Global UI's SCSS variables :arrow_right: "npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1" .
+
+- Create "vue.config.js" in root folder and fill it with :
 
 ```
-<script>
-import { GlobalButton, GlobalInput } from "global-ui";
+const path = require("path");
 
-export default {
-  name: "Your Vue Component Name",
-  components: {
-    GlobalButton,
-    GlobalInput,
+module.exports = {
+  css: {
+    loaderOptions: {
+      sass: {
+        // method of SCSS to use variables globally
+        data: `
+            @import '~node_modules/global-ui/src/assets/styles/variables.scss';
+            @import '~node_modules/global-ui/src/assets/icomoon/variables.scss';
+            @import '@/assets/variables.scss';
+          `,
+      },
+    },
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        "@": path.resolve(__dirname, "src/"),
+        node_modules: path.resolve("node_modules/"),
+      },
+    },
   },
 };
-</script>
 ```
 
-2. Import Global UI's SCSS Variables
-   Coming Soon :eyes:
-
 3. Import Global UI's Icomoon Icon Sets
-   Coming Soon :eyes:
+
+- in folder "assets", create "variables.scss" or if you have existing, inside add :
+
+```
+
+$icomoon-font-path: "~node_modules/global-ui/src/assets/icomoon/fonts";
+
+```
+
+- in your root page / root component import icomoon scss in your <style> section
+
+```
+
+<style lang="scss">
+@import "~node_modules/global-ui/src/assets/icomoon/style.scss";
+</style>
+
+```
+
+4.  And you're all set ! read how to use global ui components with the docs here https://global-ui-docs.netlify.app
 
 ## Nuxt
+
+can see example repo here :arrow_right: https://github.com/Frederick-88/nuxt-global-ui-tester
 
 The Setups are:
 
 1. Register Global Components
 
-a. in folder "plugins" create "globalui.js", inside can import components like this
+- in folder "plugins" create "globalui.js", inside can import components like this
 
 ```
+
 import Vue from "vue";
 
 import vClickOutside from "v-click-outside";
@@ -118,46 +158,55 @@ Vue.component("GlobalInput", GlobalInput);
 
 ```
 
-b. then in "nuxt.config.js" register the "globalui.js" where you import the components, so you can globally use the components without need to import the global component in your pages again.
+- then in "nuxt.config.js" register the "globalui.js" where you import the components, so you can globally use the components without need to import the global component in your pages again.
 
 ```
+
 plugins: [{ src: "~/plugins/globalui.js" }],
+
 ```
 
 2. Import Global UI's SCSS Variables
-   a. install 3 things required for Global UI's SCSS variables :arrow_right: "npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1" .
-   b. add this in your "nuxt.config.js"
+
+- install 3 things required for Global UI's SCSS variables :arrow_right: "npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1" .
+- add this in your "nuxt.config.js"
 
 ```
-  buildModules: ["@nuxtjs/style-resources"],
 
-  styleResources: {
-    scss: [
-      "~/node_modules/global-ui/src/assets/styles/variables.scss",
-    ]
-  },
+buildModules: ["@nuxtjs/style-resources"],
+
+styleResources: {
+scss: [
+"~/node_modules/global-ui/src/assets/styles/variables.scss",
+]
+},
+
 ```
 
 3. Import Global UI's Icomoon Icon Sets
-   a. in folder "assets", create "variables.scss" or if you have existing, inside add :
 
-   ```
-   $icomoon-font-path: "~@/node_modules/global-ui/src/assets/icomoon/fonts"; // to resolve the icomoon path following your environment directory
+- in folder "assets", create "variables.scss" or if you have existing, inside add :
 
-   ```
+```
+$icomoon-font-path: "~@/node_modules/global-ui/src/assets/icomoon/fonts"; // to resolve the icomoon path following your environment directory
 
-   b. in "nuxt.config.js", add :
+```
 
-   ```
-     css: ["~/node_modules/global-ui/src/assets/icomoon/style.scss"],
-       styleResources: {
-    scss: [
-      "./assets/variables.scss"
-    ]
-   },
-   ```
+- in "nuxt.config.js", add :
 
-   4. And you're all set ! read how to use global ui components with the docs here https://global-ui-docs.netlify.app
+```
+
+    css: ["~/node_modules/global-ui/src/assets/icomoon/style.scss"],
+      styleResources: {
+
+scss: [
+"./assets/variables.scss"
+]
+},
+
+```
+
+4.  And you're all set ! read how to use global ui components with the docs here https://global-ui-docs.netlify.app
 
 ## Documentation
 
@@ -179,3 +228,7 @@ https://global-ui-docs.netlify.app/ :bulb:
 ### ----------------------------------
 
 ### © Chen Frederick - 2021
+
+```
+
+```
