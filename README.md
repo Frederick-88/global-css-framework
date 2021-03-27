@@ -83,7 +83,7 @@ new Vue({
 - install 3 things required for Global UI's SCSS variables :arrow_down:
 
 ```
-npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1"
+npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1
 ```
 
 - Create "vue.config.js" in root folder and fill it with :
@@ -175,7 +175,7 @@ plugins: [{ src: "~/plugins/globalui.js" }],
 - install 3 things required for Global UI's SCSS variables :arrow_down:
 
 ```
-npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1"
+npm i @nuxtjs/style-resources node-sass@4.14.1 sass-loader@7.3.1
 ```
 
 - add this in your "nuxt.config.js"
@@ -187,7 +187,7 @@ buildModules: ["@nuxtjs/style-resources"],
 styleResources: {
 scss: [
 "~/node_modules/global-ui/src/assets/styles/variables.scss",
-]
+  ]
 },
 
 ```
