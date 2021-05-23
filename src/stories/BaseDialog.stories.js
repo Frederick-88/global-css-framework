@@ -13,7 +13,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         :is-show="isShowDefaultDialog" 
                         title="Default dialog title" 
                         text="This is a dialog description" 
-                        @closeOverlay="isShowDefaultDialog = false"
+                        @close="isShowDefaultDialog = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -42,7 +42,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         text="This is a dialog with one button description" 
                         :no-cancel="true"
                         @confirm="isShowDialogOneButton = false"
-                        @closeOverlay="isShowDialogOneButton = false"
+                        @close="isShowDialogOneButton = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -57,7 +57,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         title="Dialog with no button" 
                         text="This is a dialog with no button description" 
                         :no-button="true"
-                        @closeOverlay="isShowDialogNoButton = false"
+                        @close="isShowDialogNoButton = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -72,7 +72,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         title="Dialog with multiline button" 
                         text="This is a dialog with multiline button description" 
                         :multiline-buttons="true"
-                        @closeOverlay="isShowDialogMultilineButton = false"
+                        @close="isShowDialogMultilineButton = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -101,7 +101,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         :is-show="isShowPrimaryDialog" 
                         title="Default primary dialog title" 
                         text="This is a primary dialog description" 
-                        @closeOverlay="isShowPrimaryDialog = false"
+                        @close="isShowPrimaryDialog = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -128,7 +128,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         :is-show="isShowSuccessDialog" 
                         title="Default success dialog title" 
                         text="This is a success dialog description" 
-                        @closeOverlay="isShowSuccessDialog = false"
+                        @close="isShowSuccessDialog = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -155,7 +155,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         :is-show="isShowWarningDialog" 
                         title="Default warning dialog title" 
                         text="This is a warning dialog description" 
-                        @closeOverlay="isShowWarningDialog = false"
+                        @close="isShowWarningDialog = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
@@ -182,7 +182,7 @@ storiesOf("GlobalUI/GlobalBaseDialog", module)
                         :is-show="isShowDangerDialog" 
                         title="Default danger dialog title" 
                         text="This is a danger dialog description" 
-                        @closeOverlay="isShowDangerDialog = false"
+                        @close="isShowDangerDialog = false"
                     >
                         <p>This is a slot</p>
                     </GlobalBaseDialog>
