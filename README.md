@@ -1,4 +1,4 @@
-# GlobalUI - Open Source Vue UI Components Library built for Nuxt.js & Vue.js Developers. [![Linkedin](https://i.postimg.cc/50Y5y78B/linkedin-1.png)](https://www.linkedin.com/in/chen-frederick-1324301a8/)
+# GlobalUI - Open Source Vue UI Components Library built for Nuxt.js & Vue.js Developers. [![Linkedin](https://i.postimg.cc/50Y5y78B/linkedin-1.png)](https://www.linkedin.com/in/frederick-chen/)
 
 ![Template](https://image.freepik.com/free-vector/people-drawing-web-page-elements-smartphone-lcd-screen-front-end-development-it-concept-software-development-process-pinkish-coral-blue-palette-vector-illustration_335657-1640.jpg)
 
@@ -222,9 +222,9 @@ https://global-ui-docs.netlify.app/ :bulb:
 
 ## Creators
 
-**Chen Frederick :man:**
+**Frederick Chen :man:**
 
-- https://www.linkedin.com/in/chen-frederick-1324301a8/
+- https://www.linkedin.com/in/frederick-chen/
 - https://github.com/Frederick-88
 
 ## Reference
@@ -235,7 +235,7 @@ https://global-ui-docs.netlify.app/ :bulb:
 
 ### ----------------------------------
 
-### © Chen Frederick - 2021
+### © Frederick Chen - 2021
 
 ```
 
